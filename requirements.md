@@ -7,15 +7,16 @@ Online small business are becoming a trend especially in Jordan, encouraged by t
 ## Vision:
 
 Most business owners use social media platforms to market and display their products, however, they face many issues, one of which is reaching for costumers, since these sites are not fully designed to support business it is hard for costumers to find business owners profiles without knowing their usernames beforehand. However, our website will make it easier considering it is designed especially for that reason where it is all about business and only business!
+
 Another important aspect to consider is by establishing Yalla Business, we will support local businesses which will in return support the local economy.
 
 ## User Stories:
 
-As a user I can create a profile/store
-As a user I want to post my products on my profile as pictures
-As a user I want to search by the store name or categories
-As a user I want to  add my reviews
-As a user I want to see reviews for the stores 
+1. As a user I can create a profile/store
+2. As a user I want to post my products on my profile as pictures
+3. As a user I want to search by the store name or categories
+4. As a user I want to  add my reviews
+5. As a user I want to see reviews for the stores 
 
 
 ## Data Base:
