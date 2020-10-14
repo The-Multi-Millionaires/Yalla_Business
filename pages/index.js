@@ -7,3 +7,10 @@ export default function Home() {
     </div>
   )
 }
+
+export async function getServerSideProps(){
+  const res = await fetch('http://127.0.0.1:8000/api/v1/stores')
+  const dataObj = await res.json();
+  console.log(dataObj);
+  return {props: {users: dataObj}}
+}
