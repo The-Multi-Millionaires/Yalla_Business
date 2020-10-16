@@ -1,16 +1,22 @@
 import styles from '../styles.module.css'
+import Link from 'next/link'
+import React from 'react'
+import { useRouter } from 'next/router'
 
-export default function Home() {
-  return (
-    <div className={styles.hello}>
-      <p>Hello World</p>
-    </div>
-  )
-}
+export default function Home(props){
+  const router = useRouter()
 
-export async function getServerSideProps(){
-  const res = await fetch('http://127.0.0.1:8000/api/v1/stores')
-  const dataObj = await res.json();
-  console.log(dataObj);
-  return {props: {users: dataObj}}
-}
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    let toSearch = e.target.searching.value;
+    router.push('search/[id].js',`search/${toSearch}`)
+  }
+
+  return(
+    <>
+      <form onSubmit={handleSubmit} >
+          <input type="text" name='search' placeholder='Search any store' id='searching'/>
+          <button className='button' type="submit" >Search </button>
+      </form>
+    </>
+)}
