@@ -11,6 +11,8 @@ export default function singleView(props){
         <main>
         <div className="infoDiv">
         <p>{props.info.store_name}</p>
+        <p>{props.info.store_id}</p>
+
         </div>
         </main>
      
