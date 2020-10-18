@@ -1,22 +1,27 @@
 import styles from '../styles.module.css'
 import Link from 'next/link'
-import React from 'react'
+import React, { Component, useState } from 'react'
 import { useRouter } from 'next/router'
+import Login from '../components/Login'
 
-export default function Home(props){
-  const router = useRouter()
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    let toSearch = e.target.searching.value;
-    router.push('search/[id].js',`search/${toSearch}`)
+export default function Home(){
+  const router = useRouter();
+  const [token, setToken] = useState('');
+
+
+  const userLogin = (tok) => {
+    setToken(tok[0]);
+    console.log(tok[0]);
+    if(tok[0]){
+      window.localStorage.setItem('name', tok[1]);
+      router.push('homepage')
+    }
   }
 
   return(
     <>
-      <form onSubmit={handleSubmit} >
-          <input type="text" name='search' placeholder='Search any store' id='searching'/>
-          <button className='button' type="submit" >Search </button>
-      </form>
+      <Login userLogin={userLogin} />
     </>
 )}
+
