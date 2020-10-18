@@ -1,4 +1,7 @@
 import styles from '../../styles.module.css'
+// import searchResults from '../../searchResults.module.css'
+// import '../../styles/storeProfile.css'
+// styles/storeProfile.css
 import { useRouter } from 'next/router'
 
 
@@ -9,6 +12,7 @@ export default function singleView(props){
     return(
         <>
         <main>
+            <h1 className="ghafri">Mohammed</h1>
         <div className="infoDiv">
         {props.info.map(store =>
             <>
