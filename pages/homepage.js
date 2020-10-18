@@ -27,12 +27,3 @@ export default function Home(props){
       </form>
     </>
 )}
-
-// export async function getServerSideProps(context){
-//     const id=context.query.id
-//     console.log(id);
-//     const res= await fetch(`https://localhost:8000/yalla_business_app/api/users?search=${id}`)
-//     console.log(res);
-//     const singleData = await res.json();
-//     return {props: {info: singleData}}
-// }
