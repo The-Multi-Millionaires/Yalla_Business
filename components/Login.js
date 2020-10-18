@@ -7,7 +7,7 @@ class Login extends Component {
   }
 
   login = event => {
-    fetch('https://yalla-business-api.herokuapp.com/yalla_business_app/auth/', {
+    fetch('https://yalla-business-api.herokuapp.com/auth/', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify(this.state.credentials)
