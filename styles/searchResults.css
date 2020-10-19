@@ -1,0 +1,53 @@
+/* h1{
+    font-weight: 200;
+} */
+
+.mainInfoDiv_res{
+    border:1px solid red;
+    /* margin: 15% 0 0 1%; */
+    position: relative;
+    left:12em;
+    top:10em;
+    width: 75%;
+    
+}
+
+.singleInfo_res_img{
+    padding: 5% 0 1% 5%;
+    grid-area: header;
+}
+.singleInfo_res_p{
+    padding: 20% 0 1% 2%;
+
+    grid-area: main;
+    color: red;
+}
+
+.singleInfo_res_rank{
+    margin:0;
+
+    grid-area: rank;
+}
+.singleInfo_res_loc{
+    padding: 5% 0 1% 2%;
+
+    grid-area: loc;
+}
+
+
+.singleInfo_res{
+    background-color:silver;
+    margin: 3% 5%;
+    width: 90%;
+      border: 1px solid blue;
+    display: grid;
+        /* grid-template-columns: 1fr 1fr 1fr ; */
+        grid-template-columns: 15em 10em 1fr;
+        grid-template-areas:'header main rank''. . . ''loc loc loc' ;
+  
+  }
+
+
+
+
+
