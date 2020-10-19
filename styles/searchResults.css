@@ -1,7 +1,16 @@
 /* h1{
     font-weight: 200;
 } */
+@import url('https://fonts.googleapis.com/css2?family=Chilanka&display=swap');
 
+.searchResult_h3_res{
+    font-weight: 700;
+    font-size: 24px;
+    font-family: 'Chilanka', cursive;
+    position: relative;
+    left: 8em;
+    top:5em
+}
 .mainInfoDiv_res{
     border:1px solid red;
     /* margin: 15% 0 0 1%; */
@@ -9,42 +18,67 @@
     left:12em;
     top:10em;
     width: 75%;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #204051;
+
     
 }
 
 .singleInfo_res_img{
-    padding: 5% 0 1% 5%;
+    /* height: 272px;
+    width: 40%; */
+    border: 1px solid #204051;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #204051;
+    /* margin: 30px 15px; */
+    width:20em;
+    height:15em;
+    margin: 10% 0 5% 20%;
     grid-area: header;
 }
+
+.singleInfo_res_img:hover{
+    scale: 1.5;
+}
 .singleInfo_res_p{
-    padding: 20% 0 1% 2%;
+    font-size: 24px;
+    margin: 20% 0 1% 2%;
 
     grid-area: main;
-    color: red;
+    /* color: red; */
 }
 
 .singleInfo_res_rank{
-    margin:0;
+    /* margin:0; */
+    margin: 0 0 0 2%;
+
 
     grid-area: rank;
 }
 .singleInfo_res_loc{
-    padding: 5% 0 1% 2%;
+    /* padding: 5% 0 1% 2%; */
+    margin: 0 0 0 2%;
 
     grid-area: loc;
 }
 
 
 .singleInfo_res{
-    background-color:silver;
+    background-color:rgba(39, 75, 91, 0.5);
     margin: 3% 5%;
     width: 90%;
       border: 1px solid blue;
+      border-radius: 5px;
+    box-shadow: 2px 2px 5px #204051;
     display: grid;
         /* grid-template-columns: 1fr 1fr 1fr ; */
-        grid-template-columns: 15em 10em 1fr;
-        grid-template-areas:'header main rank''. . . ''loc loc loc' ;
+        grid-template-columns: 30em 10em 1fr;
+        grid-template-areas:'header main main''header rank rank''header loc loc'  ;
   
+  }
+  .singleInfo_res:hover{
+      background-color: rgba(39, 75, 91, 0.9);
+      cursor: pointer;
   }
 
 
