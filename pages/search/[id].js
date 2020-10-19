@@ -50,6 +50,43 @@ function routetoStore(store){
     router.push('../store_profile/[id].js', `../store_profile/${store.id}`)
     
 }
+
+var arr=['1','1','1','1','1','1','1','1']
+
+const names = ['1','1','1','1'];
+names.length=5;
+
+function starCreator(num) {
+    num=parseInt(num);
+    let colored=[];
+    let blacked=[];
+    for(var i =0;i<num;i++){
+        colored.push('1');
+    }
+    for(var i =0;i<(5-num);i++){
+        blacked.push('1');
+    }
+    // console.log("***************",colored)
+  return (
+      <>
+      {/* <p>{num}</p> */}
+    <p>
+  <span>{}</span>
+        <span>
+      {colored.map(name => (
+          <FontAwesomeIcon icon={faStar} style={{ color: 'yellow' }} />
+          ))}
+          {blacked.map(name => (
+          <FontAwesomeIcon icon={faStar} style={{ color: 'grey' }} />
+          ))}
+          </span>
+    </p>
+    </>
+  );
+}
+
+// arr.length=10
+// console.log(arr)
     return (
         <>
         <Header />
@@ -59,16 +96,17 @@ function routetoStore(store){
                 {/* <h1 className="ghafri">Mohammed</h1> */}
                 <div className="mainInfoDiv_res">
                     {/* {console.log(props.search_word)} */}
+                    {arr.map(e=>{<p>{e}</p>})}
+                    {starCreator(3)}
                     {props.info.map(store =>
                         <>
                             {/* {console.log(store)} */}
                             <div className='singleInfo_res' onClick={() => routetoStore(store)}>
                                 {/* <img className='singleInfo_res_img' src={store.images} /> */}
                                 <img className='singleInfo_res_img' src="https://imgs.xkcd.com/comics/woodpecker.png" />
+                                
 
-
-
-                                <p className='singleInfo_res_rank' > Rank is : {rankStars(store.review_rank)}<FontAwesomeIcon icon={faStar} /><FontAwesomeIcon icon={faStar} /></p>
+                                <p className='singleInfo_res_rank' > Rank is : {starCreator(store.review_rank)}</p>
 
                                 <a className='singleInfo_res_p' onClick={() => routetoStore(store)}>Store name : {store.store_name}</a>
 
