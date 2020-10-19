@@ -13,7 +13,15 @@
 }
 
 .singleInfo_res_img{
-    padding: 5% 0 1% 5%;
+    /* height: 272px;
+    width: 40%; */
+    border: 1px solid #204051;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #204051;
+    /* margin: 30px 15px; */
+    width:20em;
+    height:15em;
+    margin: 10% 0 1% 20%;
     grid-area: header;
 }
 .singleInfo_res_p{
@@ -34,18 +42,15 @@
     grid-area: loc;
 }
 
-img{
-    width:10em;
-    height:10em
-  }
+
 .singleInfo_res{
-    background-color:silver;
+    background-color:rgba(39, 75, 91, 0.5);
     margin: 3% 5%;
     width: 90%;
       border: 1px solid blue;
     display: grid;
         /* grid-template-columns: 1fr 1fr 1fr ; */
-        grid-template-columns: 15em 10em 1fr;
+        grid-template-columns: 30em 10em 1fr;
         grid-template-areas:'header main rank''. . . ''loc loc loc' ;
   
   }

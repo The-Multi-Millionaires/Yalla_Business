@@ -45,7 +45,10 @@ export default function singleView(props) {
         console.log(num, starLogo, re)
         return (<p>{num}</p>)
     }
-
+function routetoStore(){
+    router.push('../store_profile/[id].js', `../store_profile/${store.id}`)
+    
+}
     return (
         <>
             <main>
@@ -62,7 +65,7 @@ export default function singleView(props) {
 
                                 <p className='singleInfo_res_rank' >{rankStars(store.review_rank)}<FontAwesomeIcon icon={faStar} /><FontAwesomeIcon icon={faStar} /></p>
 
-                                <p className='singleInfo_res_p' onClick={() => router.push('../store_profile/[id].js', `../store_profile/${store.id}`)}>{store.store_name}</p>
+                                <a className='singleInfo_res_p' onClick={() => routetoStore()}>{store.store_name}</a>
 
                                 <p className='singleInfo_res_loc'>Store Location :{store.store_location}</p>
 
