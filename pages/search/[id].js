@@ -95,9 +95,7 @@ function starCreator(num) {
                     <h3 className='searchResult_h3_res'>Search Result for : {props.search_word}</h3>
                 {/* <h1 className="ghafri">Mohammed</h1> */}
                 <div className="mainInfoDiv_res">
-                    {/* {console.log(props.search_word)} */}
-                    {arr.map(e=>{<p>{e}</p>})}
-                    {starCreator(3)}
+                    
                     {props.info.map(store =>
                         <>
                             {/* {console.log(store)} */}
@@ -110,7 +108,7 @@ function starCreator(num) {
 
                                 <a className='singleInfo_res_p' onClick={() => routetoStore(store)}>Store name : {store.store_name}</a>
 
-                                <p className='singleInfo_res_loc'>Store Location :{store.store_location}</p>
+                                <p className='singleInfo_res_loc' >Store Location :{store.store_location}</p>
 
                             </div>
 

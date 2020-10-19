@@ -15,6 +15,12 @@ export default class ReviewForm extends React.Component {
     }
 
 
+
+
+
+    
+
+
     handleSubmit(event) {
         event.preventDefault();
 
@@ -41,7 +47,7 @@ export default class ReviewForm extends React.Component {
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit}> 
+            <form onSubmit={this.handleSubmit} className='formReview'> 
                 <input type="text" name='Userid' placeholder='User id' id='User_id'/>
                 <input type="text" name='Storeid' placeholder='store id' id='Store_id'/>
                 <input type="text" name='search' placeholder='location' id='Store_location'/>

@@ -2,6 +2,7 @@
     font-weight: 200;
 } */
 @import url('https://fonts.googleapis.com/css2?family=Chilanka&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 .searchResult_h3_res{
     font-weight: 700;
@@ -42,6 +43,9 @@
 }
 .singleInfo_res_p{
     font-size: 24px;
+    color: white;
+    font-family: 'Lobster', cursive;
+    /* font-size: 18px; */
     margin: 20% 0 1% 2%;
 
     grid-area: main;
@@ -57,16 +61,22 @@
 
 .singleInfo_res_rank{
     /* margin:0; */
+    color: white;
+    font-family: 'Lobster', cursive;
+    font-size: 18px;
     margin: 0 0 0 2%;
+    
 
 
     grid-area: rank;
 }
-.singleInfo_res_rank:hover{
 
-}
 .singleInfo_res_loc{
     /* padding: 5% 0 1% 2%; */
+    /* font-size: 48px; */
+    color: white;
+    font-family: 'Lobster', cursive;
+    font-size: 18px;
     margin: 0 0 0 2%;
 
     grid-area: loc;
