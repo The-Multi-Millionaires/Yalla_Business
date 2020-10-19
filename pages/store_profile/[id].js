@@ -1,9 +1,59 @@
 import styles from '../../styles.module.css'
 import { useRouter } from 'next/router'
 // import DisplayStoreReviews from '../../components/DisplayStoreReviews'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 import Header from '../../components/Header'
+
+import { library } from '@fortawesome/fontawesome-svg-core';
+
+// import your icons
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar, faHighlighter } from '@fortawesome/free-solid-svg-icons';
+import {
+    faGithubAlt,
+    faGoogle,
+    faFacebook,
+    faTwitter,
+
+} from '@fortawesome/free-brands-svg-icons';
+
+library.add(
+
+
+    faGithubAlt,
+    faGoogle,
+    faFacebook,
+    faTwitter,
+
+);
+
+function starCreator(num) {
+    num=parseInt(num);
+    let colored=[];
+    let blacked=[];
+    for(var i =0;i<num;i++){
+        colored.push('1');
+    }
+    for(var i =0;i<(5-num);i++){
+        blacked.push('1');
+    }
+    // console.log("***************",colored)
+  return (
+      <>
+      {/* <p>{num}</p> */}
+    <p>
+  <span>{}</span>
+        <span>
+      {colored.map(name => (
+          <FontAwesomeIcon icon={faStar} style={{ color: 'yellow' }} />
+          ))}
+          {blacked.map(name => (
+          <FontAwesomeIcon icon={faStar} style={{ color: 'grey' }} />
+          ))}
+          </span>
+    </p>
+    </>
+  );
+}
 
 
 export default function singleView(props){
@@ -47,6 +97,9 @@ export default function singleView(props){
 
                     <div className='details'>
                         <h2 className='storeName'>{props.info.store_name}</h2>
+                        <p className='profileRate'>{starCreator(props.info.review_rank)}</p>
+                        <span className='howMuch'>{props.review.length} reviews</span>
+
                         <p className='profileLocation'>{props.info.store_location}</p>
 
                         <p className='profileDescription'>{props.info.store_description}</p>
@@ -59,7 +112,6 @@ export default function singleView(props){
 
                     </div>
 
-                    <p className='profileRate'>{stars}</p>
                 </div>
                 <hr className="solid" />
                 <div className='storePics'>
@@ -71,11 +123,11 @@ export default function singleView(props){
                     <img className='storeImgs' src={props.info.images} />
                 </div>
 
-                <hr className="solid" />
+                <hr className="solid2" />
 
                 <div className='storeReviews'>
                     <span className='reviewHeader'>Reviews </span>
-                    <span className='reviewHeaderNumber'>{props.review.length} </span>
+                    <span className='reviewHeaderNumber'> </span>
 
                     {props.review.map((data,index) =>
                         <>
@@ -90,12 +142,14 @@ export default function singleView(props){
                                     </>
 
                                 </div>
+                                <p className='Userstars'>{starCreator(data.review_rate)}</p>
+
 
                             </div>
+                            <div className='breakerForComments'></div>
 
                             <div className='storeReviewComment'>
-                                <p className='Userstars'>{stars}</p>
-                                <p>{data.comment}</p>
+                                <p className='commentPReview'>{data.comment}</p>
                             </div>
                         </section>
                         </>

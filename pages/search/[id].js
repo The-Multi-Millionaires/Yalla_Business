@@ -97,20 +97,21 @@ function starCreator(num) {
                 <div className="mainInfoDiv_res">
                     {/* {console.log(props.search_word)} */}
                     {arr.map(e=>{<p>{e}</p>})}
-                    {starCreator(3)}
+                    {/* {starCreator(3)} */}
                     {props.info.map(store =>
                         <>
                             {/* {console.log(store)} */}
                             <div className='singleInfo_res' onClick={() => routetoStore(store)}>
                                 {/* <img className='singleInfo_res_img' src={store.images} /> */}
-                                <img className='singleInfo_res_img' src="https://imgs.xkcd.com/comics/woodpecker.png" />
+                                <img className='singleInfo_res_img' src={store.pro_pic} />
                                 
 
-                                <p className='singleInfo_res_rank' > Rank is : {starCreator(store.review_rank)}</p>
+                                <p className='singleInfo_res_rank' >{starCreator(store.review_rank)}</p>
 
-                                <a className='singleInfo_res_p' onClick={() => routetoStore(store)}>Store name : {store.store_name}</a>
+                                <a className='singleInfo_res_p' onClick={() => routetoStore(store)}>{store.store_name}</a>
 
-                                <p className='singleInfo_res_loc'>Store Location :{store.store_location}</p>
+                                <p className='singleInfo_res_loc'>{store.store_location}</p>
+
 
                             </div>
 
