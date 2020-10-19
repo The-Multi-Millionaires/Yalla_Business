@@ -1,3 +1,171 @@
-h1{
-    color: red;
-font-size: 100px;}
+.headerToRemove{
+    height: 100px;
+    background-color: #EDDCD2;
+}
+
+.storeProfileMain{
+    background-color: #f2f2f5;
+    
+}
+
+.storeInfo{
+    display: flex;
+    margin: 1% 16%;
+
+
+}
+
+.storeInfo .storeProfilePic{
+    height: 300px;
+    width: 32%;
+    margin-right: 9%;
+    border-radius: 50%;
+    box-shadow: 3px 5px 16px #204051;
+
+}
+.storeInfo .storeName{
+    font-size: 78px;
+}
+
+.storeInfo .details{
+    margin-top: 5%;
+}
+
+.storeInfo .profileRate{
+    margin-top: 6%;
+}
+
+.storeInfo .profileLocation{
+    margin-top: 0.5%;
+    color: gray;
+}
+
+.storeInfo .profileDescription{
+    margin-top: 7%;
+    margin-bottom: 2%;
+
+}
+
+.storeInfo .storeHours{
+    color: gray;
+    font-weight: 600;
+    margin-top: 2%;
+}
+
+.storeInfo .storeHoursTime{
+    color: gray;
+    font-size: 15px;
+    margin-top: 2%;
+
+}
+
+.storeInfo .storeNumber{
+    margin-bottom: 3%;
+    margin-top: 4%;
+}
+
+
+.storeInfo .storePrice{
+    margin-top: 2%;
+}
+
+hr.solid {
+    border-top: 3px solid #bbb;
+    margin: 7% 15% 4% 15%;
+  }
+
+.storePics{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 12% 0 15%;
+}
+
+.storePics .storeImgs{
+    width: 30%;
+    height: 219px;
+    margin-right: 3%;
+    margin-bottom: 4%;
+    border: 1px solid #204051;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #204051;
+}
+  
+.storeReviews{
+    margin: 0 18%;
+}
+
+.allReviews{
+    border: 1px solid #204051;
+    margin-bottom: 2%;
+    background-color: white;
+    /* display: -webkit-flex; */
+    display: flex;
+    /* -webkit-flex-direction: column; */
+    flex-direction: column;
+    width: 74%;
+    height: 215px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #204051;
+    margin-left: 7%;
+    margin-top: 5%;
+
+}
+
+.reviewHeader{
+    font-size: 50px;
+    margin-bottom: 8%;
+    margin-left: -40px;
+    font-weight: 700;
+    color: #204051;
+}
+
+.reviewHeaderNumber{
+    font-size: 40px;
+    margin-bottom: 8%;
+    margin-left: 7px;
+    font-weight: 700;
+    color: rgb(32, 64, 81,0.7);
+}
+
+.userReviewToStore{
+    display: flex;
+    flex-direction: row;
+    margin: 2% 3% 2% 3%;
+    border-bottom: 1px solid black;
+}
+
+.nextToImg{
+    margin-left: 2%;
+    margin-top: 1%;
+}
+
+.allReviews .userOfReviewPic{
+    /* border-radius: 50%;
+    width: 47%;
+    margin: 10% 9% 2% 6%;     */
+    border-radius: 50%;
+    height: 70px;
+
+}
+
+.allReviews .userOfReviewName{
+    /* border-radius: 50%; */ 
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.allReviews .locationOfReview{
+    margin-top: 3px;
+    color: gray;
+}
+.storeReviewComment{
+    /* margin: 4% 3% 0 -9%;
+    border: 5px solid #FFF1E6;
+    background-color: #FFF1E6; */
+    margin: 1% 3% 2% 3%;
+}
+
+.storeReviewComment .Userstars{
+    margin-bottom: 10px;
+
+}
