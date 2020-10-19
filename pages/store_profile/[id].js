@@ -3,6 +3,8 @@ import { useRouter } from 'next/router'
 // import DisplayStoreReviews from '../../components/DisplayStoreReviews'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import Header from '../../components/Header'
+
 
 export default function singleView(props){
     const router = useRouter()
@@ -37,9 +39,7 @@ export default function singleView(props){
         <>
             <main className='storeProfileMain'>
 
-                <header className='headerToRemove'>
-                    <img src='https://www.google.com/imgres?imgurl=https%3A%2F%2Fyallaconnect.online%2Fwp-content%2Fuploads%2F2020%2F07%2Flogo.png&imgrefurl=https%3A%2F%2Fyallaconnect.online%2F&tbnid=sxv4QU7LvyC7sM&vet=12ahUKEwj82a-2hcDsAhVBpBoKHTXTCnkQMygIegUIARCxAQ..i&docid=Wzb2wgKc96VZzM&w=600&h=300&q=yalla%20business%20logo&ved=2ahUKEwj82a-2hcDsAhVBpBoKHTXTCnkQMygIegUIARCxAQ'/>
-                </header>
+                <Header />
 
                 <div className="storeInfo">
 
