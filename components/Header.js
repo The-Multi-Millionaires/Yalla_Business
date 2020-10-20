@@ -78,8 +78,8 @@ export default function Header(props){
     // console.log("This is first name",typeof(`Mohammed`))
     
 
-  return(<h2 className="userNameHeaderBar">{first_name}</h2>)
-  }
+  // return(<h2 className="userNameHeaderBar">{first_name}</h2>)
+  // }
 
   return(
     <>
@@ -124,4 +124,4 @@ export default function Header(props){
           </div>
       </header>
     </>
-)
+)}
