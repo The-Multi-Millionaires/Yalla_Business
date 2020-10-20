@@ -26,9 +26,43 @@ import { faHome, faBookmark,  faUsers, faSignOutAlt } from '@fortawesome/free-so
 //     faTwitter,
 
 // );
+var i ='qqqqqqq';
+class Localstorage extends Component{
+  constructor(props) {
+      // console.group("0000000000000000000000000000")
+      
+      super(props);
+      this.state = {
+        user_id:0,
+        first_name:'mmmmmmmmmmm',
+        last_name:'',
+        thing: "things"
+      };
+      // this.componentDidMount();
+      // console.log("Props XXXX",this.props)
+    };
 
-
-
+    componentDidMount() {
+        // console.log(this.props)
+        // console.group("0000000000000000000000000000")
+        const firstName = localStorage.getItem(this.props.name)
+        this.setState({first_name:firstName})
+        // this.state.first_name=firstName
+        // i = firstName
+        // console.log("this.state.first_name",this.state.first_name,firstName,this.props.name)
+      // localStorage.setItem('user_id', JSON.stringify(this.state.user_id)) 
+      // localStorage.setItem('firstName', JSON.stringify(this.state.first_name))  
+      // localStorage.setItem('name', JSON.stringify(this.state.first_name))  
+      // localStorage.setItem('_increment', JSON.stringify(this.state.first_name))  
+  
+    }
+    render(){
+      // this.componentDidMount() 
+      // console.log("First name",this.state.first_name,i)
+    return(<h2 className="userNameHeaderBar">{this.state.first_name}</h2>)
+    }
+}
+// console.log(i)
 export default function Header(props){
   const router = useRouter();
 
@@ -42,12 +76,22 @@ export default function Header(props){
   }
 
 
+    
+    // var user_obj=window.localStorage.getItem('user_obj')
+    // var first_name=window.localStorage.getItem('firstName')
+    // console.log("This is first name",typeof(first_name))
+    // console.log("This is first name",typeof(`Mohammed`))
+    
+
+  // return(<h2 className="userNameHeaderBar">{first_name}</h2>)
+  // }
+
   return(
     <>
       <header className='headerBar'>
         <nav className="headerNavBar">
          
-          <div className='headerIcons'>
+          {/* <div className='headerIcons'>
             <a  href='homepage'>
               <FontAwesomeIcon className='allheadericonns' icon={faHome} style={{ color: '#660708', width: '48px', height: '50px', marginRight: '16%'}} />
             </a>
@@ -60,11 +104,12 @@ export default function Header(props){
               <FontAwesomeIcon className='allheadericonns' icon={ faUsers} style={{ color: '#660708', width: '47px', height: '50px'}} />
             </a>
 
-          </div>
-
+          </div> */}
+{/* 
           <a className="headerLogo" href='homepage'>
             <img className="headerLogoimg" src="/logo2.gif" alt="my image" />
-          </a>
+          </a> */}
+          <h1 className='logoTitle'>Yalla Business</h1>
           <form className="wrap" onSubmit={handleSubmit} >
               <input type="text" name='search' id="searching" placeholder='Search' className="searchTerm"/> 
               <button type="submit" className="searchButton">Search </button> 
@@ -74,9 +119,12 @@ export default function Header(props){
 
         </nav>
          <div className='userHeaderInfo'>
-            <h2 className="userNameHeaderBar">Dana</h2>
+            {/* <h2 className="userNameHeaderBar">{getuserName()}</h2> */}
+            {/* <p>{getuserName()}</p> */}
+            {/* <p>{Localstorage}</p> */}
+            <Localstorage name='firstName'/>
             <a  href='homepage'>
-              <FontAwesomeIcon className='allheadericonns' icon={ faSignOutAlt} style={{ color: '#660708', width: '30px', height: '41px', marginTop:'16px'}} />
+              <FontAwesomeIcon className='allheadericonns' icon={ faSignOutAlt} style={{ color: '#00a53c', width: '30px', height: '40px', marginTop:'16px'}} />
             </a>
           </div>
       </header>

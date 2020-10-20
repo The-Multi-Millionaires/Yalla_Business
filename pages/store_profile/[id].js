@@ -2,8 +2,11 @@ import styles from '../../styles.module.css'
 import { useRouter } from 'next/router'
 // import DisplayStoreReviews from '../../components/DisplayStoreReviews'
 import Header from '../../components/Header'
+import React, { Component, useState } from 'react'
 
 import { library } from '@fortawesome/fontawesome-svg-core';
+// import Localstorage from '../../components/LocalStorage'
+// Localstorage
 
 // import your icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -26,6 +29,48 @@ library.add(
 
 );
 
+
+
+
+class Localstorage extends Component{
+    constructor(props) {
+        console.group("0000000000000000000000000000")
+        
+        super(props);
+        this.state = {
+          user_id:0,
+          first_name:'mmmmmmmmmmm',
+          last_name:'',
+          store_id:'',
+          thing: "things"
+        };
+        // this.componentDidMount();
+        console.log("Props XXXX",this.props)
+      };
+  
+      componentDidMount() {
+          // console.log(this.props)
+          // console.group("0000000000000000000000000000")
+        //   console.log(i)
+          const item = localStorage.setItem('store_id',this.props.name)
+          console.log(item)
+          this.setState({store_id:'item'})
+          // this.state.first_name=firstName
+          // i = firstName
+          // console.log("this.state.first_name",this.state.first_name,firstName,this.props.name)
+        // localStorage.setItem('user_id', JSON.stringify(this.state.user_id)) 
+        // localStorage.setItem('firstName', JSON.stringify(this.state.first_name))  
+        // localStorage.setItem('name', JSON.stringify(this.state.first_name))  
+        // localStorage.setItem('_increment', JSON.stringify(this.state.first_name))  
+    
+      }
+      render(){
+        // this.componentDidMount() 
+        // console.log("First name",this.state.first_name,i)
+    //   return(<h2 className="userNameHeaderBar">{this.state.first_name}</h2>)
+    return null
+      }
+  }
 function starCreator(num) {
     num=parseInt(num);
     let colored=[];
@@ -57,6 +102,7 @@ function starCreator(num) {
 
 
 export default function singleView(props){
+    console.log(props)
     const router = useRouter()
 
     let filled_stars = props.info.review_rank
@@ -88,6 +134,7 @@ export default function singleView(props){
     return(
         <>
             <main className='storeProfileMain'>
+            <Localstorage  name={props.info.id}/>
 
                 <Header />
 
@@ -163,6 +210,7 @@ export default function singleView(props){
         </>
     );
 }
+// var i=100;
 export async function getServerSideProps(context){
     const id=context.query.id
     // console.log(id);
@@ -178,9 +226,10 @@ export async function getServerSideProps(context){
         let newUser = await res2.json();  
         allusers.push(newUser)      
     }
-
     // console.log(allusers);
-
-    // console.log(singleData2);
+    
+    // console.log("single",singleData1);
+    // i=singleData.id
+    // console.log(i)
     return {props: {info: singleData, review: singleData2, users: allusers}}
 }
