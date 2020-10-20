@@ -28,7 +28,7 @@ export default function singleView(props) {
         return (num)
     }
 function routetoStore(store){
-    
+    console.log("RouteTo Store")
     router.push('../store_profile/[id].js', `../store_profile/${store.id}`)
     
 }

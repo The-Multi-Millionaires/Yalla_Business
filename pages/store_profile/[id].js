@@ -49,19 +49,11 @@ class Localstorage extends Component{
       };
   
       componentDidMount() {
-          // console.log(this.props)
-          // console.group("0000000000000000000000000000")
-        //   console.log(i)
+          
           const item = localStorage.setItem('store_id',this.props.name)
           console.log(item)
           this.setState({store_id:'item'})
-          // this.state.first_name=firstName
-          // i = firstName
-          // console.log("this.state.first_name",this.state.first_name,firstName,this.props.name)
-        // localStorage.setItem('user_id', JSON.stringify(this.state.user_id)) 
-        // localStorage.setItem('firstName', JSON.stringify(this.state.first_name))  
-        // localStorage.setItem('name', JSON.stringify(this.state.first_name))  
-        // localStorage.setItem('_increment', JSON.stringify(this.state.first_name))  
+           
     
       }
       render(){
