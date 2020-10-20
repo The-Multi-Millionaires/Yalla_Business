@@ -81,6 +81,7 @@ class Home extends React.Component {
         super(props);
         this.state = {
             rate: 0,
+            review_user_profile:"Unknown User",
         }
         this.reviewCreateHandler = this.reviewCreateHandler.bind(this);
     }
@@ -92,12 +93,22 @@ class Home extends React.Component {
             "store_location": review.Store_location,
             "store_pic": review.Store_pic,
             "comment": review.Comment,
-            "review_rate": this.state.rate
+            "review_rate": this.state.rate,
+            "review_user_profile":this.state.review_user_profile
         });
 
     }
 
-
+    componentDidMount() {
+        const firstName=localStorage.getItem('firstName')
+        const item = localStorage.getItem('store_id',this.props.name)
+        console.log(item)
+        this.setState({
+            store_id:item,review_user_profile:firstName
+        })
+         
+  
+    }
     rate_star = star => {
         // let new_star= star ? star:0;
         console.log(star)

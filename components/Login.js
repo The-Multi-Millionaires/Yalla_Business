@@ -16,7 +16,7 @@ class Login extends Component {
   }
 
   componentDidUpdate() {
-    // console.log("HEre")
+    console.log(this.state)
     localStorage.setItem('user_id', this.state.user_id) 
     localStorage.setItem('firstName', this.state.first_name)  
       // window.localStorage.setItem('user_id', tok[2]);
