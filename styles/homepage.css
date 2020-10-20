@@ -47,23 +47,27 @@ Flexbox Layout
   *******************************/
   
   /* s */
-  .header {
+  /* .header {
     padding: 20px 0;
     margin: 0 auto;
-    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/25480/hero-img.jpg') top center no-repeat;
+    background: url('/mobile.jpg') top center no-repeat;
     background-size: cover;
     /* width:100%; */
-    height: 320px;
+    /* height: 320px; */
 
-  }
+  
   
   .logo {
-    /* background: transparent center center no-repeat; */
-    width: 195px;
+    width: 163px;
     background-size: contain;
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
+    height: 119px;
+    left: 10px;
+    position: relative;
+    left: 622px;
+    margin-top: 37px;
   }
   
   .nav {
@@ -71,9 +75,9 @@ Flexbox Layout
   }
   
   .nav li {
-    margin: 12px 0 12px 28px;
+    margin: 21px 41px 10px 9px;
     color: #fff;
-    font-size: 12px;
+    font-size: 22px;
   }
   
   .nav li a {
@@ -91,6 +95,8 @@ Flexbox Layout
     border-radius: 2px;
     transition: 200ms ease-in-out;
     padding: 8px 16px 7px;
+    font-size: 18px;
+
   }
   
   .nav li:last-child a:hover {
@@ -160,12 +166,13 @@ Flexbox Layout
     display: block;
     /* border: none; */
     border-radius: 5px;
-    height: 33px;
+    height: 46px;
     width: 31%;
     background-color: #f5f5f5;
     position: relative;
-    left: 406px;
-    top: -128px;
+    left: 412px;
+    top: -147px;
+    margin-bottom: -11px;
   }
   
   .searchButtonosama {
@@ -186,3 +193,22 @@ Flexbox Layout
     left: 624px;
     top: -186px;
   }
+
+  .pfordana {
+    position: relative;
+    left: 504px;
+    /* margin-top: -187px; */
+    color: white;
+    font-size: 13px;
+    font-family: 'Lemonada', cursive;
+    /* margin: 30px 20px 0 0; */
+    width: 450px;
+    top: -212px;
+
+}
+main.homepagebody {
+    height: 600px;
+    margin: 0 auto;
+    background: url('/newest.jpg') top center no-repeat;
+    background-size: cover;
+}

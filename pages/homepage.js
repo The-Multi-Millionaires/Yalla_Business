@@ -25,8 +25,12 @@ export default function Home(props){
   return(
     <>
       {/* <Header /> */}
-      <Homepageheader />
+      <main className="homepagebody">
 
+
+      
+      <Homepageheader />
+      </main>
       {/* <form onSubmit={handleSubmit} >
           <input type="text" name='search' placeholder='Search any store' id='searching'/>
           <button className='button' type="submit" >Search </button>

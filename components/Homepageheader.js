@@ -40,5 +40,6 @@ export default function Homepageheader(props){
               <input type="text" name='search' id="searching" placeholder='Search' className="searchTermosama"/> 
               <button type="submit" className="searchButtonosama">Search </button> 
           </form>
+          <p className="pfordana">Find any resturants , home services , and more ...</p>
       </>
   )}
