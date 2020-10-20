@@ -1,4 +1,4 @@
-.container{
+.container_res{
     border: 1px solid grey;
     position: relative;
     top:10em;
@@ -6,10 +6,10 @@
     width: 60%;
     padding: 1% 0;
 }
-.container form >*{
+.container_res form >*{
     display: block;
     position: relative;
-    left: 10em;
+    /* left: 10em; */
     height:3em;
     width: 70%;
     margin: 0 0 1% 0;
@@ -23,7 +23,7 @@
     opacity: 1; /* Firefox */
   }
 
-.container form >:last-child{
+.container_res form >:last-child{
     position: relative;
     top:1em;
     /* left:0em */
