@@ -12,10 +12,12 @@ export default function Home(){
 
   const userLogin = (tok) => {
     setToken(tok[0]);
-    console.log(tok[0]);
+    console.log("This from index",tok[0],tok[2],tok[3]);
     if(tok[0]){
       window.localStorage.setItem('name', tok[1]);
+      window.localStorage.setItem('user_obj',tok[3])
       router.push('homepage')
+      
     }
   }
 

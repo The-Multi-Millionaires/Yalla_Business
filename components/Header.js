@@ -9,23 +9,23 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 // import your icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome, faBookmark,  faUsers, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
-import {
-    faGithubAlt,
-    faGoogle,
-    faFacebook,
-    faTwitter,
+// import {
+//     faGithubAlt,
+//     faGoogle,
+//     faFacebook,
+//     faTwitter,
 
-} from '@fortawesome/free-brands-svg-icons';
+// } from '@fortawesome/free-brands-svg-icons';
 
-library.add(
+// library.add(
 
 
-    faGithubAlt,
-    faGoogle,
-    faFacebook,
-    faTwitter,
+//     faGithubAlt,
+//     faGoogle,
+//     faFacebook,
+//     faTwitter,
 
-);
+// );
 
 
 
@@ -40,7 +40,10 @@ export default function Header(props){
     let toSearch = e.target.searching.value;
     router.push('search/[id].js',`search/${toSearch}`)
   }
-
+  function getuserName(){
+    
+    return('Mohammed')
+  }
 
   return(
     <>
@@ -74,7 +77,7 @@ export default function Header(props){
 
         </nav>
          <div className='userHeaderInfo'>
-            <h2 className="userNameHeaderBar">Dana</h2>
+            <h2 className="userNameHeaderBar">{getuserName()}</h2>
             <a  href='homepage'>
               <FontAwesomeIcon className='allheadericonns' icon={ faSignOutAlt} style={{ color: '#660708', width: '30px', height: '41px', marginTop:'16px'}} />
             </a>

@@ -3,10 +3,34 @@ import React, { Component} from 'react';
 class Login extends Component {
 
   state = {
-    credentials: {username: '', password: ''}
+    credentials: {username: '', password: ''},
+    user_id:0,
+    user_obj:{}
   }
 
   login = event => {
+    var desired_name=this.state.credentials.username;
+    // console.log(this.state.credentials.username)
+    var id_user;
+    fetch('https://yalla-business-api.herokuapp.com/yalla_business_app/api/users?search='+desired_name)
+    .then(response=>response.json())
+    .then(data => {console.log(data)
+      var i=0
+    data.map(elem=>{
+      // console.log(elem.username)
+      if(elem.username==desired_name){
+        console.log(elem.id)
+          this.state.user_id=elem.id;
+          this.state.user_obj=elem;
+
+  var user_id=elem.id;
+        i=elem.id
+      
+      }
+      
+    })}).catch(res=>console.log(res))
+    
+    
     fetch('https://yalla-business-api.herokuapp.com/auth/', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
@@ -15,7 +39,7 @@ class Login extends Component {
     .then( data => data.json())
     .then(
       data => {
-        this.props.userLogin([data.token,this.state.credentials.username]);
+        this.props.userLogin([data.token,this.state.credentials.username,this.state.user_id,this.state.user_obj]);
         // console.log(this.state.credentials.username);
 
       }
