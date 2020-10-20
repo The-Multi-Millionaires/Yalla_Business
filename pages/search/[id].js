@@ -7,27 +7,8 @@ import { useRouter } from 'next/router'
 // import the library
 import { library } from '@fortawesome/fontawesome-svg-core';
 
-// import your icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar, faHighlighter } from '@fortawesome/free-solid-svg-icons';
-// import {
-//     faGithubAlt,
-//     faGoogle,
-//     faFacebook,
-//     faTwitter,
-
-// } from '@fortawesome/free-brands-svg-icons';
-
-// library.add(
-
-
-//     faGithubAlt,
-//     faGoogle,
-//     faFacebook,
-//     faTwitter,
-
-// );
-
 
 
 export default function singleView(props) {
@@ -63,84 +44,57 @@ function starCreator(num) {
     let blacked=[];
     for(var i =0;i<num;i++){
         colored.push('1');
-    }
+        }
     for(var i =0;i<(5-num);i++){
         blacked.push('1');
-    }
-    // console.log("***************",colored)
-  return (
-      <>
-      {/* <p>{num}</p> */}
-    <p>
-  <span>{}</span>
-        <span>
-      {colored.map(name => (
-          <FontAwesomeIcon icon={faStar} style={{ color: 'yellow' }} />
-          ))}
-          {blacked.map(name => (
-          <FontAwesomeIcon icon={faStar} style={{ color: 'grey' }} />
-          ))}
-          </span>
-    </p>
-    </>
-  );
-}
+        }
 
-// arr.length=10
-// console.log(arr)
+  return (
+                <>
+                <p>
+            <span>{}</span>
+                    <span>
+                {colored.map(name => (
+                    <FontAwesomeIcon icon={faStar} style={{ color: 'yellow' }} />
+                    ))}
+                    {blacked.map(name => (
+                    <FontAwesomeIcon icon={faStar} style={{ color: 'grey' }} />
+                    ))}
+                    </span>
+                </p>
+                </>
+            );
+            }
+
+
     return (
         <>
-        <Header />
-            <main>
-
-                <div className='searchContainerSide'>
-
-                    <section className="searchCatogoriesBar">
-                        <div className="saidBarNav">
-                            <nav className="circleNavCatogories" class="userNav">
-                                <ul>
-                                    <li><a href="/index">Restaurants</a></li>
-                                    <li><a href="/news">Fashion</a></li>
-                                    <li><a href="/sport">Services</a></li>
-                                    <li><a href="/health">Entertainment</a></li>
-                                    <li><a href="/health">Discover More</a></li>
-                                    <li><a href="/tech">Education</a></li>
-                                    <li><a href="/favorite">Electrical</a></li>
-                                    <li><a href="/dashboard">Beauty</a></li>
-                                    <li><a href="/about">Furniture</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </section>
-
-         
-
+             <Header />
+                 <main>
+                    
                     <div className="mainInfoDiv_res">
-                        {/* {console.log(props.search_word)} */}
-                        {arr.map(e=>{<p>{e}</p>})}
-                        {/* {starCreator(3)} */}
-                        {props.info.map(store =>
-                            <>
-
-                                {console.log(store)}
-                                <div className='singleInfo_res' onClick={() => routetoStore(store)}>
-                                    {/* <img className='singleInfo_res_img' src={store.images} /> */}
-                                    <img className='singleInfo_res_img' src={store.pro_pic} />
-                                    
-
-                                    <p className='singleInfo_res_rank' >{starCreator(store.review_rank)}</p>
-
-                                    <a className='singleInfo_res_p' onClick={() => routetoStore(store)}>{store.store_name}</a>
-
-                                    <p className='singleInfo_res_loc'>{store.store_location}</p>
+                        <div className='forHeaderDana'>
+                            <h2 className='onSearchDana'>All Stores</h2>
+                        </div>
+                        <div className='searchSquares'>
+                            {arr.map(e=>{<p>{e}</p>})}
+                            {props.info.map(store =>
+                                <>
+                                    <div className='singleInfo_res' onClick={() => routetoStore(store)}>
+                                        {/* <img className='singleInfo_res_img' src={store.images} /> */}
+                                        <img className='singleInfo_res_img' src={store.pro_pic} />
+                                        
+                                        <a className='singleInfo_res_p' onClick={() => routetoStore(store)}>{store.store_name}</a>
+                                        <p className='singleInfo_res_loc'>{store.store_location}</p>
+                                        <p className='singleInfo_res_rank' >{starCreator(store.review_rank)}</p>
 
 
-                                </div>
+                                    </div>
 
-                            </>
-                        )}
+                                </>
+                            )}
+                        </div>
                     </div>
-                </div>
             </main>
 
         </>

@@ -24,7 +24,6 @@ console.log(Localstorage)
       
 
       router.push('homepage')
-      
     }
   }
 

@@ -118,12 +118,10 @@ class Home extends React.Component {
                 <div className="container_res">
                     < GetStar new_rate={this.rate_star} />
 
+                <div className="container">
                     <ReviewForm onReviewCreate={this.reviewCreateHandler} />
                 </div>
-                <div>
-                    {/* {StarRating()} */}
-                    {/* <StarRatingDemo /> */}
-                    {/* < GetStar new_rate={this.rate_star} /> */}
+                
 
                 </div>
             </>
