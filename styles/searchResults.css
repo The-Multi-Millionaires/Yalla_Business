@@ -2,6 +2,7 @@
     font-weight: 200;
 } */
 @import url('https://fonts.googleapis.com/css2?family=Chilanka&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 .searchResult_h3_res{
     font-weight: 700;
@@ -63,9 +64,7 @@
     grid-area: rank;
 }
 
-.singleInfo_res_rank:hover{
 
-}
 .singleInfo_res_loc{
     margin: -82px 0 0 -142%;
     grid-area: loc;
