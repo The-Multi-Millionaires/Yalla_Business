@@ -1,4 +1,4 @@
-import React,{useState,useEffect,useRef} from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import axios from 'axios'
 // import{FaStar} from 'react-icon/fa';
 
@@ -18,7 +18,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 //         const [rating,setRating] = useState(null);
 //         const [hover,setHover]= useState(null);
 //         // const [hover,setHover]=useHover();
-    
+
 //         return(
 //             <>
 //             <div>
@@ -41,7 +41,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 //                             onMouseOver={()=>setHover(ratingValue)}
 //                             onMouseLeave={()=>setHover(null)}
 //                             />
-    
+
 //                         </label>
 //                     )
 //                 })}
@@ -50,7 +50,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 //             </>
 //         )
 //     }
-    
+
 
 
 
@@ -62,10 +62,14 @@ import Header from '../../components/Header'
 // import StarRatingDemo from '../../components/starsCreator'
 import GetStar from '../../components/starsCreator'
 
-
-
-
-
+// if (!window) {
+//     require('localstorage-polyfill');
+// }
+// function componentDidMount() {
+// const data = localStorage.getItem('name')
+// console.log(data)
+// }
+// componentDidMount()
 
 
 const url = 'https://yalla-business-api.herokuapp.com/yalla_business_app/api/v1/review/';
@@ -75,8 +79,8 @@ class Home extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state={
-            rate:0,
+        this.state = {
+            rate: 0,
         }
         this.reviewCreateHandler = this.reviewCreateHandler.bind(this);
     }
@@ -94,14 +98,14 @@ class Home extends React.Component {
     }
 
 
-    rate_star= star =>{
+    rate_star = star => {
         // let new_star= star ? star:0;
         console.log(star)
         // this.setState({
         //     rate: star
         // })
-        this.state.rate=star
-        }
+        this.state.rate = star
+    }
     //   rate_star= star =>{console.log(star)
     //   }
 
@@ -109,15 +113,15 @@ class Home extends React.Component {
     render() {
         return (
             <>
-                <Header />
+                {/* <Header /> */}
+
+                <div className="container_res">
+                    < GetStar new_rate={this.rate_star} />
 
                 <div className="container">
                     <ReviewForm onReviewCreate={this.reviewCreateHandler} />
                 </div>
-                <div>
-                  {/* {StarRating()} */}
-{/* <StarRatingDemo /> */}
-< GetStar new_rate={this.rate_star} />
+                
 
                 </div>
             </>

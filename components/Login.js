@@ -14,8 +14,43 @@ class Login extends Component {
     signUpCred: {first_name:'',last_name:'',username: '', email:'' ,password: '', passwordsec:''}
 
   }
-  
+
+  componentDidUpdate() {
+    console.log("HEre")
+    localStorage.setItem('user_id', JSON.stringify(this.state.user_id)) 
+    localStorage.setItem('firstName', JSON.stringify(this.state.first_name))  
+    console.log("props",this.props)
+    // localStorage.setItem('name', JSON.stringify(this.state.first_name))  
+    // localStorage.setItem('_increment', JSON.stringify(this.state.first_name))  
+
+  }
   login = event => {
+    var desired_name=this.state.credentials.username;
+    // console.log(this.state.credentials.username)
+    var id_user;
+
+
+    fetch('https://yalla-business-api.herokuapp.com/yalla_business_app/api/users?search='+desired_name)
+    .then(response=>response.json())
+    .then(data => {console.log(data)
+      var i=0
+    data.map(elem=>{
+      // console.log(elem.username)
+      if(elem.username==desired_name){
+        console.log(elem)
+          this.state.user_id=elem.id;
+          this.state.user_obj=elem;
+          this.state.first_name=elem.first_name
+          
+
+  var user_id=elem.id;
+        i=elem.id
+      
+      }
+      
+    })}).catch(res=>console.log(res))
+    
+    
     fetch('https://yalla-business-api.herokuapp.com/auth/', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},

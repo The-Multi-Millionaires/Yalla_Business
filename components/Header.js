@@ -27,7 +27,36 @@ import { faHome, faBookmark,  faUsers, faSignOutAlt } from '@fortawesome/free-so
 
 // );
 
+class Localstorage extends Component{
+  constructor(props) {
+      console.group("0000000000000000000000000000")
+      
+      super(props);
+      this.state = {
+        user_id:0,
+        first_name:'',
+        last_name:'',
+        thing: "things"
+      };
+      console.log("Props XXXX",this.props)
+    };
 
+    componentDidMount() {
+        console.log(this.props)
+        console.group("0000000000000000000000000000")
+        const firstName = localStorage.getItem(this.props.name)
+        this.state.first_name=firstName
+        console.log("this.state.first_name",this.state.first_name,firstName,this.props.name)
+      // localStorage.setItem('user_id', JSON.stringify(this.state.user_id)) 
+      // localStorage.setItem('firstName', JSON.stringify(this.state.first_name))  
+      // localStorage.setItem('name', JSON.stringify(this.state.first_name))  
+      // localStorage.setItem('_increment', JSON.stringify(this.state.first_name))  
+  
+    }
+    render(){
+    return(<h2 className="userNameHeaderBar">Still{this.state.first_name}</h2>)
+    }
+}
 
 export default function Header(props){
   const router = useRouter();
@@ -41,6 +70,16 @@ export default function Header(props){
     router.push('search/[id].js',`search/${toSearch}`)
   }
 
+
+    
+    // var user_obj=window.localStorage.getItem('user_obj')
+    // var first_name=window.localStorage.getItem('firstName')
+    // console.log("This is first name",typeof(first_name))
+    // console.log("This is first name",typeof(`Mohammed`))
+    
+
+  return(<h2 className="userNameHeaderBar">{first_name}</h2>)
+  }
 
   return(
     <>
@@ -75,11 +114,14 @@ export default function Header(props){
 
         </nav>
          <div className='userHeaderInfo'>
-            <h2 className="userNameHeaderBar">Dana</h2>
+            {/* <h2 className="userNameHeaderBar">{getuserName()}</h2> */}
+            {/* <p>{getuserName()}</p> */}
+            {/* <p>{Localstorage}</p> */}
+            <Localstorage name='firstName'/>
             <a  href='homepage'>
               <FontAwesomeIcon className='allheadericonns' icon={ faSignOutAlt} style={{ color: '#00a53c', width: '30px', height: '40px', marginTop:'16px'}} />
             </a>
           </div>
       </header>
     </>
-)}
+)
