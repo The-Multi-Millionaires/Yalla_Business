@@ -5,6 +5,7 @@ import { useRouter } from 'next/router'
 import Login from '../components/Login'
 // import '../styles/header.css'
 import Header from '../components/Header'
+import Homepageheader from '../components/Homepageheader'
 
 
 export default function Home(props){
@@ -23,7 +24,13 @@ export default function Home(props){
 
   return(
     <>
-      <Header />
+      {/* <Header /> */}
+      <main className="homepagebody">
+
+
+      
+      <Homepageheader />
+      </main>
       {/* <form onSubmit={handleSubmit} >
           <input type="text" name='search' placeholder='Search any store' id='searching'/>
           <button className='button' type="submit" >Search </button>

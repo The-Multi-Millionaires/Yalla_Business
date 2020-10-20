@@ -10,6 +10,8 @@ import '../styles/reset.css'
 import '../styles/userprofile.css'
 import '../styles/reviewForm.css'
 import '../styles/stars.css'
+import '../styles/homepage.css'
+
 
 // import '../styles/starsRating.css'
 
