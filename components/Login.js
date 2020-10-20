@@ -9,7 +9,9 @@ class Login extends Component {
   state = {
     credentials: {username: '', password: ''},
     user_id:0,
-    user_obj:{}
+    first_name:'',
+    last_name:''
+
   }
 
   login = event => {
@@ -23,9 +25,10 @@ class Login extends Component {
     data.map(elem=>{
       // console.log(elem.username)
       if(elem.username==desired_name){
-        console.log(elem.id)
+        console.log(elem)
           this.state.user_id=elem.id;
           this.state.user_obj=elem;
+          this.state.first_name=elem.first_name
 
   var user_id=elem.id;
         i=elem.id
@@ -43,7 +46,11 @@ class Login extends Component {
     .then( data => data.json())
     .then(
       data => {
-        this.props.userLogin([data.token,this.state.credentials.username,this.state.user_id,this.state.user_obj]);
+        var x=[data.token,
+          this.state.credentials.username,
+          this.state.user_id,this.state.user_obj,
+          this.state.first_name]
+        this.props.userLogin(x);
         // console.log(this.state.credentials.username);
 
       }
