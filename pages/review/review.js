@@ -109,9 +109,11 @@ class Home extends React.Component {
     render() {
         return (
             <>
-                <Header />
+                {/* <Header /> */}
 
-                <div className="container">
+                <div className="container_res">
+< GetStar new_rate={this.rate_star} />
+
                     <ReviewForm onReviewCreate={this.reviewCreateHandler} />
                 </div>
                 <div>

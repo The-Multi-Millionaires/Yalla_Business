@@ -40,7 +40,18 @@ export default function Header(props){
     let toSearch = e.target.searching.value;
     router.push('search/[id].js',`search/${toSearch}`)
   }
+  function getuserName(props){
 
+
+    
+    var user_obj=window.localStorage.getItem('user_obj')
+    var first_name=window.localStorage.getItem('firstName')
+    console.log("This is first name",typeof(first_name))
+    console.log("This is first name",typeof(`Mohammed`))
+    
+
+  return(<h2 className="userNameHeaderBar">{first_name}</h2>)
+  }
 
   return(
     <>
@@ -74,7 +85,8 @@ export default function Header(props){
 
         </nav>
          <div className='userHeaderInfo'>
-            <h2 className="userNameHeaderBar">Dana</h2>
+            {/* <h2 className="userNameHeaderBar">{getuserName()}</h2> */}
+            <p>{getuserName()}</p>
             <a  href='homepage'>
               <FontAwesomeIcon className='allheadericonns' icon={ faSignOutAlt} style={{ color: '#660708', width: '30px', height: '41px', marginTop:'16px'}} />
             </a>

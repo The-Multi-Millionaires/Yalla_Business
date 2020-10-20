@@ -7,3 +7,7 @@
       cursor: pointer;
       transition: color 200ms;
   }
+  .rateME{
+      width: fit-content;
+      background-color: white;
+  }
