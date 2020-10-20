@@ -137,7 +137,7 @@ export default function singleView(props){
                                 <div className='nextToImg'>
                                     <>
                                     {/* {userName(1)} */}
-                                    <h4 className='userOfReviewName'>{props.users[index].username}</h4>
+                                    <h4 className='userOfReviewName'>{data.review_user_profile}</h4>
                                     <p className='locationOfReview'>{data.store_location}</p>
                                     </>
 
@@ -172,15 +172,15 @@ export async function getServerSideProps(context){
     const res2= await fetch(`https://yalla-business-api.herokuapp.com/yalla_business_app/api/v1/review/?search=${id}&search_fields=store_id__id`)
     const singleData2 = await res2.json();
     // console.log(singleData2);
-    let allusers=[]
-    for(let i=0; i<singleData2.length; i++){
-        let res2= await fetch(`https://yalla-business-api.herokuapp.com/yalla_business_app/api/users/${singleData2[i].user_id}`)
-        let newUser = await res2.json();  
-        allusers.push(newUser)      
-    }
+    // let allusers=[]
+    // for(let i=0; i<singleData2.length; i++){
+    //     let res2= await fetch(`https://yalla-business-api.herokuapp.com/yalla_business_app/api/users/${singleData2[i].user_id}`)
+    //     let newUser = await res2.json();  
+    //     allusers.push(newUser)      
+    // }
 
     // console.log(allusers);
 
     // console.log(singleData2);
-    return {props: {info: singleData, review: singleData2, users: allusers}}
+    return {props: {info: singleData, review: singleData2}}
 }
