@@ -5,7 +5,7 @@
     
 }
 
-.storeInfo{
+.userProfileInfo{
     display: -webkit-flex;
     /* display: flex; */
     background-color: white;
@@ -16,60 +16,60 @@
     border-radius: 4%;
 }
 
-.storeInfo .storeProfilePic{
-    height: 277px;
+.userProfileInfo .userProfilePicInfo{
+    height: 295px;
     width: 32%;
     margin-right: 9%;
-    border-radius: 50%;
+    border-radius: 20%;
     box-shadow: 3px 5px 16px #204051;
     margin-top: -1%;
     margin-left: 3%;
 
 }
-.storeInfo .storeName{
+.userProfileInfo .userProfileName{
     font-size: 78px;
 }
 
-.storeInfo .details{
+.userProfileInfo .userProfiledetails{
     margin-top: -2%;
 }
 
-.storeInfo .profileRate{
+.userProfileInfo .userProfileLocatin{
     margin-top: 2%;
     margin-bottom: 2%;
 }
 
-.storeInfo .profileLocation{
+.userProfileInfo .profileLocation{
     margin-top: 0.5%;
     color: gray;
 }
 
-.storeInfo .profileDescription{
+.userProfileInfo .userProfileDescription{
     margin-top: 7%;
     margin-bottom: 2%;
 
 }
 
-.storeInfo .storeHours{
+.userProfileInfo .storeHours{
     color: gray;
     font-weight: 600;
     margin-top: 2%;
 }
 
-.storeInfo .storeHoursTime{
+.userProfileInfo .storeHoursTime{
     color: gray;
     font-size: 15px;
     margin-top: 2%;
 
 }
 
-.storeInfo .storeNumber{
+.userProfileInfo .storeNumber{
     margin-bottom: 3%;
     margin-top: 4%;
 }
 
 
-.storeInfo .storePrice{
+.userProfileInfo .storePrice{
     margin-top: 2%;
 }
 
@@ -78,9 +78,9 @@ hr.solid {
     margin: 7% 15% 4% 15%;
   }
 
-hr.solid2 {
+hr.usersolid2 {
 border-top: 3px solid #bbb;
-margin: 1% 15% 4% 15%;;
+margin: 7% 15% 4% 15%;;
 }
 
 .storePics{
@@ -100,44 +100,48 @@ margin: 1% 15% 4% 15%;;
     margin-left: 24px;
 }
   
-.storeReviews{
+.alluserReviews{
     margin: 0 18%;
     background-color: white;
     box-shadow: -1px 15px 36px #204051;
     border-radius: 2%;
+    -webkit-padding-after: 2%;
     padding-block-end: 2%;
+    -webkit-padding-before: 2%;
     padding-block-start: 2%;
 }
 
-.allReviews{
+.userPallReviews{
     border: 1px solid #204051;
     margin-bottom: 2%;
     background-color: #f5f5f5;
     /* display: -webkit-flex; */
-    display: -webkit-flex;
+    /* display: -webkit-flex; */
     display: flex;
     /* -webkit-flex-direction: column; */
-    -webkit-flex-direction: column;
+    /* -webkit-flex-direction: column; */
     flex-direction: column;
-    width: 74%;
-    height: 215px;
+    width: 29%;
+    height: 387px;
     border-radius: 5px;
     box-shadow: 2px 2px 5px #204051;
-    margin-left: 7%;
+    /* margin-left: 7%; */
     margin-top: 5%;
+    /* margin-right: 3%; */
+    margin: 5% 17px 0 19px;
 
 }
 
-.reviewHeader{
+.showUserHeader{
     font-size: 50px;
     margin-bottom: 8%;
-    margin-left: 62px;
+    margin-left: 9px;
     font-weight: 700;
     color: #660708;
     margin-top: 3%;
 }
 
-.reviewHeaderNumber{
+.userPreviewHeaderNumber{
     font-size: 40px;
     margin-bottom: 8%;
     margin-left: 7px;
@@ -145,37 +149,40 @@ margin: 1% 15% 4% 15%;;
     color: rgb(32, 64, 81,0.7);
 }
 
-.userReviewToStore{
+.userPuserReviewToStore{
+    /* display: -webkit-flex; */
     display: flex;
-    flex-direction: row;
+    /* -webkit-flex-direction: row; */
+    flex-direction: column;
     margin: 2% 3% 2% 3%;
-    position: relative;
+    /* position: relative; */
+    /* height: 232px*/
 
 }
 
-.nextToImg{
+.userPnextToImg{
     margin-left: 2%;
-    margin-top: 1%;
+    margin-top: 5%;
 }
 
-.allReviews .userOfReviewPic{
-    border-radius: 50%;
-    height: 70px;
+.userPallReviews .userPuserOfReviewPic{
+    /* border-radius: 50%; */
+    height: 157px;
     box-shadow: 2px 2px 5px #204051;
 }
 
-.allReviews .userOfReviewName{
-    /* border-radius: 50%; */ 
+.userPallReviews .userPuserOfReviewName{
+    border-radius: 50%;
     font-size: 22px;
     font-weight: 500;
 }
 
-.allReviews .locationOfReview{
+.userPallReviews .userPlocationOfReview{
     margin-top: 3px;
     color: gray;
 }
-.storeReviewComment{
-    margin: 2% 3% 2% 5%;
+.userPstoreReviewComment{
+    margin: 5% 3% 5% 5%;
     background-color: rgba(0,0,0,0.1);
     /* margin: 15px 5px; */
     border-radius: 5px;
@@ -188,26 +195,27 @@ margin: 1% 15% 4% 15%;;
 }
 
 
-.storeReviewComment .commentPReview{
+.storeReviewComment .userPcommentPReview{
     margin: 10px 15px;
 }
-.Userstars{
-    margin-bottom: 10px;
-    /* margin: 4% 0 0 59%; */
-    position: absolute;
-    left: 489px;
-    right: 34px;
-    top: 17px;
+.userPUserstars{
+    margin-bottom: 16px;
+    margin-top: 7px;
 }
 
-.breakerForComments{
+.userPbreakerForComments{
     border-bottom: 1px solid #660708;
     margin: -7px 3% 0 3%;
 
 }
 
-.howMuch{
+.userPhowMuch{
     color: gray;
     margin: -27px 0px 7px 106px;
     display: block;
+}
+
+.inOnePlace{
+    display: flex;
+    flex-wrap: wrap;
 }

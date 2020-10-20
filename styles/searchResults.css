@@ -2,38 +2,44 @@
     font-weight: 200;
 } */
 @import url('https://fonts.googleapis.com/css2?family=Chilanka&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 .searchResult_h3_res{
     font-weight: 700;
     font-size: 24px;
     font-family: 'Chilanka', cursive;
-    position: relative;
+    /* position: relative; */
     left: 8em;
     top:5em
 }
 .mainInfoDiv_res{
-    border:1px solid grey;
+    border: 1px solid grey;
     /* margin: 15% 0 0 1%; */
     position: relative;
-    left:12em;
-    top:10em;
-    width: 75%;
-    border-radius: 5px;
-    box-shadow: 2px 2px 5px #204051;
+    left: 9em;
+    top: 9em;
+    width: 728px;
+    /* border-radius: 5px; */
+    /* box-shadow: 2px 2px 5px #204051; */
+    /* margin: 0 18%; */
+    background-color: white;
+    box-shadow: -1px 15px 36px #204051;
+    border-radius: 2%;
+    /* -webkit-padding-after: 2%; */
+    padding-block-end: 2%;
+    /* -webkit-padding-before: 2%; */
+    padding-block-start: 2%;
 
     
 }
 
 .singleInfo_res_img{
-    /* height: 272px;
-    width: 40%; */
     border: 1px solid #204051;
     border-radius: 5px;
     box-shadow: 2px 2px 5px #204051;
-    /* margin: 30px 15px; */
-    width:20em;
-    height:15em;
-    margin: 10% 0 5% 20%;
+    width: 14em;
+    height: 9em;
+    margin: 2% 0 4% 1%;
     grid-area: header;
 }
 
@@ -42,10 +48,8 @@
 }
 .singleInfo_res_p{
     font-size: 24px;
-    margin: 20% 0 1% 2%;
-
+    margin: 15% 0 13% -142%;
     grid-area: main;
-    /* color: red; */
 }
 .singleInfo_res_p:hover{
     transform: scale(1.1);
@@ -56,45 +60,96 @@
 }
 
 .singleInfo_res_rank{
-    /* margin:0; */
-    margin: 0 0 0 2%;
-
-
+    margin: -65px 0 0 -35%;
     grid-area: rank;
 }
-.singleInfo_res_rank:hover{
 
-}
+
 .singleInfo_res_loc{
-    /* padding: 5% 0 1% 2%; */
-    margin: 0 0 0 2%;
-
+    margin: -82px 0 0 -142%;
     grid-area: loc;
-}
-.singleInfo_res_loc:hover{
-
 }
 
 
 .singleInfo_res{
-    background-color:rgba(39, 75, 91, 0.5);
+    /* background-color: rgba(39, 75, 91, 0.5);  */
     margin: 3% 5%;
-    width: 90%;
-      border: 1px solid blue;
-      border-radius: 5px;
-    box-shadow: 2px 2px 5px #204051;
+    /* width: 90%; */
+    border: 1px solid blue;
+    /* border-radius: 5px; */
+    /* box-shadow: 2px 2px 5px #204051; */
     display: grid;
-        /* grid-template-columns: 1fr 1fr 1fr ; */
-        grid-template-columns: 30em 10em 1fr;
-        grid-template-areas:'header main main''header rank rank''header loc loc'  ;
+    grid-template-columns: 30em 10em 1fr;
+    grid-template-areas:
+        'header main main'
+        'header rank rank'
+        'header loc loc';
+    border: 1px solid #204051;
+    margin-bottom: 2%;
+    background-color: #f5f5f5;
+    width: 73%;
+    height: 215px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #204051;
+    margin-left: 7%;
+    margin-top: 5%;
   
   }
   .singleInfo_res:hover{
-      background-color: rgba(39, 75, 91, 0.9);
+      background-color: rgba(0, 0, 0, 0.1);
       cursor: pointer;
   }
 
 
 
+.searchContainerSide{
+    display: flex;
+    flex-direction: row;
+}
 
+  .searchCatogoriesBar{
+    width: 372px;
+    height: 494px;
+    border: 1px solid #204051;
+    border-radius: 31%;
+    box-shadow: 2px 2px 5px #204051;
+    background-color: #660708;
+    margin-top: 10%;
+    position: -webkit-sticky;
+    position: sticky;
+    /* top: 41%; */
+    margin-left: 3%;
+}
 
+.saidBarNav{
+    /* background-color: #72999F; */
+    border: none;
+    border-radius: 4px;
+    width: 201px;
+    margin: 74px 21%;
+}
+
+.circleNavCatogories{
+    /* margin: 2% 12%; */
+}
+
+.circleNavCatogories ul li{
+    /* border-right: 1.5px solid #f5f5f5; */
+    width: 250px;
+    margin-bottom: -2%;
+}
+
+.circleNavCatogories ul li a{
+    border-left: 2px solid rgba(157, 2, 8, .85);
+    padding: 0 10px;
+    color: #f5f5f5;
+    font-size: 20px;
+    font-family: 'Hind Siliguri', Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    line-height: 2;
+    /* margin-bottom: 4%;*/
+}
+
+.circleNavCatogories ul li a:hover{
+    color: #CCD5D6;
+}
