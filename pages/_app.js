@@ -6,6 +6,11 @@ import '../styles/storeProfile.css'
 import '../styles/searchResults.css'
 import '../styles/header.css'
 import '../styles/reset.css'
+import '../styles/reviewForm.css'
+import '../styles/stars.css'
+
+// import '../styles/starsRating.css'
+
 
 
 
