@@ -7,8 +7,21 @@
       cursor: pointer;
       transition: color 200ms;
   }
+  .star:hover{
+      color: green;
+  }
   .rateME{
       width: fit-content;
       background-color: white;
       transform: scale(1.5);
+  }
+  .stars_creator_res{
+    width: fit-content;
+    transform: scale(2);
+    position: relative;
+    top: 5em;
+    left: 7em;
+    /* top: 5em; */
+    /* text-align: center; */
+
   }
