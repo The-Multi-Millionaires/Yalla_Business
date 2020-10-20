@@ -1,6 +1,6 @@
 import React, { Component} from 'react';
 import jQuery from 'jquery'
-import d3 from 'd3'
+// import d3 from 'd3'
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 
@@ -76,7 +76,7 @@ class Login extends Component {
         
       
     
-          <div className="container">
+          <div className="containerSignin">
           <div className="welcome">
             <div className="pinkbox">
               <div className="signup nodisplay">
