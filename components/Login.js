@@ -16,10 +16,12 @@ class Login extends Component {
   }
 
   componentDidUpdate() {
-    console.log("HEre")
-    localStorage.setItem('user_id', JSON.stringify(this.state.user_id)) 
-    localStorage.setItem('firstName', JSON.stringify(this.state.first_name))  
-    console.log("props",this.props)
+    // console.log("HEre")
+    localStorage.setItem('user_id', this.state.user_id) 
+    localStorage.setItem('firstName', this.state.first_name)  
+      // window.localStorage.setItem('user_id', tok[2]);
+
+    // console.log("props",this.props)
     // localStorage.setItem('name', JSON.stringify(this.state.first_name))  
     // localStorage.setItem('_increment', JSON.stringify(this.state.first_name))  
 
@@ -37,7 +39,7 @@ class Login extends Component {
     data.map(elem=>{
       // console.log(elem.username)
       if(elem.username==desired_name){
-        console.log(elem)
+        // console.log(elem)
           this.state.user_id=elem.id;
           this.state.user_obj=elem;
           this.state.first_name=elem.first_name

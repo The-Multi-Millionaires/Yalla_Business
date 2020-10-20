@@ -11,7 +11,7 @@ export default function Home(){
   const [token, setToken] = useState('');
 
 // console.log("Log",Login)
-console.log(Localstorage)
+// console.log(Localstorage)
   const userLogin = (tok) => {
     setToken(tok[0]);
     console.log("This from index",tok[0],tok[1],tok[2],tok[3]);
