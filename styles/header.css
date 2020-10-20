@@ -32,6 +32,10 @@ body{
   margin: 0 0 0 176px;
 }
 
+.allheadericonns:hover{
+  box-shadow: 10px 5px 25px #2c0404;
+
+}
 
 .headerLogo {
   block-size: 49px;
@@ -40,6 +44,20 @@ body{
   height: 111px;
   box-shadow: 3px 5px 16px #204051;
   margin: 0 0px 0 115px;
+}
+
+.headerLogoimg{
+  block-size: 49px;
+  width: 100%;
+  border-radius: 50%;
+  height: 111px;
+  box-shadow: 3px 5px 16px #204051;
+  /* margin: 0 0px 0 115px; */
+}
+
+.headerLogoimg:hover{
+  box-shadow: 10px 5px 25px #2c0404;
+
 }
 
 .wrap {

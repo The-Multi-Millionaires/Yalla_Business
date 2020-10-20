@@ -48,14 +48,23 @@ export default function Header(props){
         <nav className="headerNavBar">
          
           <div className='headerIcons'>
-            <FontAwesomeIcon icon={faHome} style={{ color: '#660708', width: '48px', height: '50px', marginRight: '16%'}} />
-            <FontAwesomeIcon icon={faBookmark} style={{ color: '#660708', width: '30px', height: '50px', marginRight: '17%'}} />
-            <FontAwesomeIcon icon={ faUsers} style={{ color: '#660708', width: '47px', height: '50px'}} />
+            <a  href='homepage'>
+              <FontAwesomeIcon className='allheadericonns' icon={faHome} style={{ color: '#660708', width: '48px', height: '50px', marginRight: '16%'}} />
+            </a>
+            
+            <a  href='homepage'>
+              <FontAwesomeIcon className='allheadericonns' icon={faBookmark} style={{ color: '#660708', width: '30px', height: '50px', marginRight: '17%'}} />
+              </a>
+
+            <a  href='homepage'>
+              <FontAwesomeIcon className='allheadericonns' icon={ faUsers} style={{ color: '#660708', width: '47px', height: '50px'}} />
+            </a>
+
           </div>
 
-
-          <img className="headerLogo" src="/logo2.gif" alt="my image" />
-
+          <a className="headerLogo" href='homepage'>
+            <img className="headerLogoimg" src="/logo2.gif" alt="my image" />
+          </a>
           <form className="wrap" onSubmit={handleSubmit} >
               <input type="text" name='search' id="searching" placeholder='Search' className="searchTerm"/> 
               <button type="submit" className="searchButton">Search </button> 
@@ -65,8 +74,10 @@ export default function Header(props){
 
         </nav>
          <div className='userHeaderInfo'>
-            <h2 className="userNameHeaderBar">osama </h2>
-            <FontAwesomeIcon icon={ faSignOutAlt} style={{ color: '#660708', width: '30px', height: '80px '}} />
+            <h2 className="userNameHeaderBar">Dana</h2>
+            <a  href='homepage'>
+              <FontAwesomeIcon className='allheadericonns' icon={ faSignOutAlt} style={{ color: '#660708', width: '30px', height: '41px', marginTop:'16px'}} />
+            </a>
           </div>
       </header>
     </>
