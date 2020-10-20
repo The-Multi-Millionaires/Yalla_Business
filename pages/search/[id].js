@@ -122,7 +122,7 @@ function starCreator(num) {
                         {props.info.map(store =>
                             <>
 
-                                {console.log(store)}
+                                {/* {console.log(store)} */}
                                 <div className='singleInfo_res' onClick={() => routetoStore(store)}>
                                     {/* <img className='singleInfo_res_img' src={store.images} /> */}
                                     <img className='singleInfo_res_img' src={store.pro_pic} />
@@ -147,8 +147,8 @@ function starCreator(num) {
     );
 }
 export async function getServerSideProps(context) {
-    // console.log(context)
     const id = context.query.id
+    // console.log(id)
     const res = await fetch(`https://yalla-business-api.herokuapp.com/yalla_business_app/api/v1/stores?search=${id}`)
     const singleData = await res.json();
     return { props: { info: singleData,search_word:id } }
