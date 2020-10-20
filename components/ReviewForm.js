@@ -1,5 +1,14 @@
 import React from 'react'
+// let userid=window.localStorage.getItem('name')
+// console.log(userid)
 
+// function componentDidMount() {
+//     const data = localStorage.getItem('name')
+//     console.log("#$%^&*^#@#%$^",data);
+//     if(data) {
+//       //here you can set your state if it is necessary
+//     }
+//   }
 export default class ReviewForm extends React.Component {
     constructor(props) {
         super(props)
@@ -14,7 +23,21 @@ export default class ReviewForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    componentDidMount() {
+        const first_name = localStorage.getItem('firstName')
+        const user_id = localStorage.getItem('user_id')
+this.state.User_id=user_id;
+        
+// this.state.
 
+
+
+    // let userid=window.localStorage.getItem('name')
+        // console.log(data,"Is the best ever ");
+        if(first_name) {
+          //here you can set your state if it is necessary
+        }
+      }
 
 
 
@@ -22,6 +45,7 @@ export default class ReviewForm extends React.Component {
 
 
     handleSubmit(event) {
+
         event.preventDefault();
 
         let userid = event.target.User_id.value;
@@ -30,7 +54,7 @@ export default class ReviewForm extends React.Component {
         let pic = event.target.Store_pic.value;
         let comment = event.target.Comment.value;
         let rate = event.target.Review_rate.value;
-        
+        // console.log(this.state.User_id)
         this.setState((state, props) => ({
             User_id: 'dana', 
             Store_id: 'Mac', 

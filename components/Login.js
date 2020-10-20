@@ -14,10 +14,21 @@ class Login extends Component {
 
   }
 
+  componentDidUpdate() {
+    console.log("HEre")
+    localStorage.setItem('user_id', JSON.stringify(this.state.user_id)) 
+    localStorage.setItem('firstName', JSON.stringify(this.state.first_name))  
+    console.log("props",this.props)
+    // localStorage.setItem('name', JSON.stringify(this.state.first_name))  
+    // localStorage.setItem('_increment', JSON.stringify(this.state.first_name))  
+
+  }
   login = event => {
     var desired_name=this.state.credentials.username;
     // console.log(this.state.credentials.username)
     var id_user;
+
+
     fetch('https://yalla-business-api.herokuapp.com/yalla_business_app/api/users?search='+desired_name)
     .then(response=>response.json())
     .then(data => {console.log(data)
@@ -29,6 +40,7 @@ class Login extends Component {
           this.state.user_id=elem.id;
           this.state.user_obj=elem;
           this.state.first_name=elem.first_name
+          
 
   var user_id=elem.id;
         i=elem.id

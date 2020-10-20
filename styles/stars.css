@@ -10,4 +10,5 @@
   .rateME{
       width: fit-content;
       background-color: white;
+      transform: scale(1.5);
   }
