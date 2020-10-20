@@ -26,27 +26,30 @@ import { faHome, faBookmark,  faUsers, faSignOutAlt } from '@fortawesome/free-so
 //     faTwitter,
 
 // );
-
+var i ='qqqqqqq';
 class Localstorage extends Component{
   constructor(props) {
-      console.group("0000000000000000000000000000")
+      // console.group("0000000000000000000000000000")
       
       super(props);
       this.state = {
         user_id:0,
-        first_name:'',
+        first_name:'mmmmmmmmmmm',
         last_name:'',
         thing: "things"
       };
-      console.log("Props XXXX",this.props)
+      // this.componentDidMount();
+      // console.log("Props XXXX",this.props)
     };
 
     componentDidMount() {
-        console.log(this.props)
-        console.group("0000000000000000000000000000")
+        // console.log(this.props)
+        // console.group("0000000000000000000000000000")
         const firstName = localStorage.getItem(this.props.name)
-        this.state.first_name=firstName
-        console.log("this.state.first_name",this.state.first_name,firstName,this.props.name)
+        this.setState({first_name:firstName})
+        // this.state.first_name=firstName
+        // i = firstName
+        // console.log("this.state.first_name",this.state.first_name,firstName,this.props.name)
       // localStorage.setItem('user_id', JSON.stringify(this.state.user_id)) 
       // localStorage.setItem('firstName', JSON.stringify(this.state.first_name))  
       // localStorage.setItem('name', JSON.stringify(this.state.first_name))  
@@ -54,10 +57,12 @@ class Localstorage extends Component{
   
     }
     render(){
-    return(<h2 className="userNameHeaderBar">Still{this.state.first_name}</h2>)
+      // this.componentDidMount() 
+      // console.log("First name",this.state.first_name,i)
+    return(<h2 className="userNameHeaderBar">{this.state.first_name}</h2>)
     }
 }
-
+// console.log(i)
 export default function Header(props){
   const router = useRouter();
 

@@ -101,8 +101,8 @@ function starCreator(num) {
     );
 }
 export async function getServerSideProps(context) {
-    // console.log(context)
     const id = context.query.id
+    // console.log(id)
     const res = await fetch(`https://yalla-business-api.herokuapp.com/yalla_business_app/api/v1/stores?search=${id}`)
     const singleData = await res.json();
     return { props: { info: singleData,search_word:id } }

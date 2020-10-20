@@ -10,6 +10,8 @@ import React from 'react'
 //     }
 //   }
 export default class ReviewForm extends React.Component {
+
+
     constructor(props) {
         super(props)
         this.state = {
@@ -26,7 +28,12 @@ export default class ReviewForm extends React.Component {
     componentDidMount() {
         const first_name = localStorage.getItem('firstName')
         const user_id = localStorage.getItem('user_id')
-this.state.User_id=user_id;
+        const store_num=localStorage.getItem('store_id')
+
+this.setState({
+    User_id:user_id,
+    Store_id:store_num,
+})
         
 // this.state.
 
