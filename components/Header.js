@@ -47,7 +47,7 @@ export default function Header(props){
       <header className='headerBar'>
         <nav className="headerNavBar">
          
-          <div className='headerIcons'>
+          {/* <div className='headerIcons'>
             <a  href='homepage'>
               <FontAwesomeIcon className='allheadericonns' icon={faHome} style={{ color: '#660708', width: '48px', height: '50px', marginRight: '16%'}} />
             </a>
@@ -60,11 +60,12 @@ export default function Header(props){
               <FontAwesomeIcon className='allheadericonns' icon={ faUsers} style={{ color: '#660708', width: '47px', height: '50px'}} />
             </a>
 
-          </div>
-
+          </div> */}
+{/* 
           <a className="headerLogo" href='homepage'>
             <img className="headerLogoimg" src="/logo2.gif" alt="my image" />
-          </a>
+          </a> */}
+          <h1 className='logoTitle'>Yalla Business</h1>
           <form className="wrap" onSubmit={handleSubmit} >
               <input type="text" name='search' id="searching" placeholder='Search' className="searchTerm"/> 
               <button type="submit" className="searchButton">Search </button> 
@@ -76,7 +77,7 @@ export default function Header(props){
          <div className='userHeaderInfo'>
             <h2 className="userNameHeaderBar">Dana</h2>
             <a  href='homepage'>
-              <FontAwesomeIcon className='allheadericonns' icon={ faSignOutAlt} style={{ color: '#660708', width: '30px', height: '41px', marginTop:'16px'}} />
+              <FontAwesomeIcon className='allheadericonns' icon={ faSignOutAlt} style={{ color: '#00a53c', width: '30px', height: '40px', marginTop:'16px'}} />
             </a>
           </div>
       </header>
