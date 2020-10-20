@@ -21,6 +21,8 @@ export default class ReviewForm extends React.Component {
             Store_pic: '', 
             Comment:'', 
             Review_rate: 1,
+            review_user_profile:"Unknown"
+
         }
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -33,6 +35,7 @@ export default class ReviewForm extends React.Component {
 this.setState({
     User_id:user_id,
     Store_id:store_num,
+    review_user_profile:first_name,
 })
         
 // this.state.

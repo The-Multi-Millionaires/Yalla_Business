@@ -49,19 +49,11 @@ class Localstorage extends Component{
       };
   
       componentDidMount() {
-          // console.log(this.props)
-          // console.group("0000000000000000000000000000")
-        //   console.log(i)
+          
           const item = localStorage.setItem('store_id',this.props.name)
           console.log(item)
           this.setState({store_id:'item'})
-          // this.state.first_name=firstName
-          // i = firstName
-          // console.log("this.state.first_name",this.state.first_name,firstName,this.props.name)
-        // localStorage.setItem('user_id', JSON.stringify(this.state.user_id)) 
-        // localStorage.setItem('firstName', JSON.stringify(this.state.first_name))  
-        // localStorage.setItem('name', JSON.stringify(this.state.first_name))  
-        // localStorage.setItem('_increment', JSON.stringify(this.state.first_name))  
+           
     
       }
       render(){
@@ -184,7 +176,7 @@ export default function singleView(props){
                                 <div className='nextToImg'>
                                     <>
                                     {/* {userName(1)} */}
-                                    <h4 className='userOfReviewName'>{props.users[index].username}</h4>
+                                    <h4 className='userOfReviewName'>{data.review_user_profile}</h4>
                                     <p className='locationOfReview'>{data.store_location}</p>
                                     </>
 
@@ -220,16 +212,15 @@ export async function getServerSideProps(context){
     const res2= await fetch(`https://yalla-business-api.herokuapp.com/yalla_business_app/api/v1/review/?search=${id}&search_fields=store_id__id`)
     const singleData2 = await res2.json();
     // console.log(singleData2);
-    let allusers=[]
-    for(let i=0; i<singleData2.length; i++){
-        let res2= await fetch(`https://yalla-business-api.herokuapp.com/yalla_business_app/api/users/${singleData2[i].user_id}`)
-        let newUser = await res2.json();  
-        allusers.push(newUser)      
-    }
+    // let allusers=[]
+    // for(let i=0; i<singleData2.length; i++){
+    //     let res2= await fetch(`https://yalla-business-api.herokuapp.com/yalla_business_app/api/users/${singleData2[i].user_id}`)
+    //     let newUser = await res2.json();  
+    //     allusers.push(newUser)      
+    // }
+
     // console.log(allusers);
-    
-    // console.log("single",singleData1);
-    // i=singleData.id
-    // console.log(i)
-    return {props: {info: singleData, review: singleData2, users: allusers}}
+
+    // console.log(singleData2);
+    return {props: {info: singleData, review: singleData2}}
 }
