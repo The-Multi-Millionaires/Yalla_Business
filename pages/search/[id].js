@@ -92,28 +92,52 @@ function starCreator(num) {
         <Header />
             <main>
 
-                    <h3 className='searchResult_h3_res'>Search Result for : {props.search_word}</h3>
-                {/* <h1 className="ghafri">Mohammed</h1> */}
-                <div className="mainInfoDiv_res">
-                    
-                    {props.info.map(store =>
-                        <>
-                            {/* {console.log(store)} */}
-                            <div className='singleInfo_res' onClick={() => routetoStore(store)}>
-                                {/* <img className='singleInfo_res_img' src={store.images} /> */}
-                                <img className='singleInfo_res_img' src="https://imgs.xkcd.com/comics/woodpecker.png" />
-                                
+                <div className='searchContainerSide'>
 
-                                <p className='singleInfo_res_rank' > Rank is : {starCreator(store.review_rank)}</p>
+                    <section className="searchCatogoriesBar">
+                        <div className="saidBarNav">
+                            <nav className="circleNavCatogories" class="userNav">
+                                <ul>
+                                    <li><a href="/index">Restaurants</a></li>
+                                    <li><a href="/news">Fashion</a></li>
+                                    <li><a href="/sport">Services</a></li>
+                                    <li><a href="/health">Entertainment</a></li>
+                                    <li><a href="/health">Discover More</a></li>
+                                    <li><a href="/tech">Education</a></li>
+                                    <li><a href="/favorite">Electrical</a></li>
+                                    <li><a href="/dashboard">Beauty</a></li>
+                                    <li><a href="/about">Furniture</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </section>
 
-                                <a className='singleInfo_res_p' onClick={() => routetoStore(store)}>Store name : {store.store_name}</a>
+         
 
-                                <p className='singleInfo_res_loc' >Store Location :{store.store_location}</p>
+                    <div className="mainInfoDiv_res">
+                        {/* {console.log(props.search_word)} */}
+                        {arr.map(e=>{<p>{e}</p>})}
+                        {/* {starCreator(3)} */}
+                        {props.info.map(store =>
+                            <>
+                                {/* {console.log(store)} */}
+                                <div className='singleInfo_res' onClick={() => routetoStore(store)}>
+                                    {/* <img className='singleInfo_res_img' src={store.images} /> */}
+                                    <img className='singleInfo_res_img' src={store.pro_pic} />
+                                    
 
-                            </div>
+                                    <p className='singleInfo_res_rank' >{starCreator(store.review_rank)}</p>
 
-                        </>
-                    )}
+                                    <a className='singleInfo_res_p' onClick={() => routetoStore(store)}>{store.store_name}</a>
+
+                                    <p className='singleInfo_res_loc'>{store.store_location}</p>
+
+
+                                </div>
+
+                            </>
+                        )}
+                    </div>
                 </div>
             </main>
 

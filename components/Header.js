@@ -4,6 +4,30 @@ import { useRouter } from 'next/router'
 import Login from '../components/Login'
 // import '../styles/header.css'
 
+import { library } from '@fortawesome/fontawesome-svg-core';
+
+// import your icons
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHome, faBookmark,  faUsers, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
+import {
+    faGithubAlt,
+    faGoogle,
+    faFacebook,
+    faTwitter,
+
+} from '@fortawesome/free-brands-svg-icons';
+
+library.add(
+
+
+    faGithubAlt,
+    faGoogle,
+    faFacebook,
+    faTwitter,
+
+);
+
+
 
 export default function Header(props){
   const router = useRouter();
@@ -21,23 +45,40 @@ export default function Header(props){
   return(
     <>
       <header className='headerBar'>
-        <nav id="navvv">
-          <img className="imggg" src="/logo.gif" alt="my image" />
-          {/* <h1 className="h111">Yalla Business </h1> */}
+        <nav className="headerNavBar">
+         
+          <div className='headerIcons'>
+            <a  href='homepage'>
+              <FontAwesomeIcon className='allheadericonns' icon={faHome} style={{ color: '#660708', width: '48px', height: '50px', marginRight: '16%'}} />
+            </a>
+            
+            <a  href='homepage'>
+              <FontAwesomeIcon className='allheadericonns' icon={faBookmark} style={{ color: '#660708', width: '30px', height: '50px', marginRight: '17%'}} />
+              </a>
 
-          <form onSubmit={handleSubmit} >
-            <div className="wrap">
-                <div className="search">
-                    <input type="text" name='search' id="searching" placeholder='Search' className="searchTerm"/> <button type="submit" className="searchButton">Search </button>
-                </div>
-            </div>
-              {/* <button className='button' type="submit" >Search </button> */}
+            <a  href='homepage'>
+              <FontAwesomeIcon className='allheadericonns' icon={ faUsers} style={{ color: '#660708', width: '47px', height: '50px'}} />
+            </a>
+
+          </div>
+
+          <a className="headerLogo" href='homepage'>
+            <img className="headerLogoimg" src="/logo2.gif" alt="my image" />
+          </a>
+          <form className="wrap" onSubmit={handleSubmit} >
+              <input type="text" name='search' id="searching" placeholder='Search' className="searchTerm"/> 
+              <button type="submit" className="searchButton">Search </button> 
           </form>
 
-          <h2 className="h222">osama </h2>
-          <button type="submit" className="LogoutButton">Logout</button>
+         
 
         </nav>
+         <div className='userHeaderInfo'>
+            <h2 className="userNameHeaderBar">Dana</h2>
+            <a  href='homepage'>
+              <FontAwesomeIcon className='allheadericonns' icon={ faSignOutAlt} style={{ color: '#660708', width: '30px', height: '41px', marginTop:'16px'}} />
+            </a>
+          </div>
       </header>
     </>
 )}

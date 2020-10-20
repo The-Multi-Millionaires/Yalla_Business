@@ -10,8 +10,8 @@ import Header from '../components/Header'
 export default function Home(props){
   const router = useRouter();
 
-  let name = window.localStorage.getItem('name');
-  console.log(name);
+  // let name = window.localStorage.getItem('name');
+  // console.log(name);
   
   // const handleSubmit = (e) => {
   //   e.preventDefault()
