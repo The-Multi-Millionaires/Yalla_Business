@@ -47,6 +47,7 @@ export default function singleView(props) {
         return (num)
     }
 function routetoStore(store){
+    
     router.push('../store_profile/[id].js', `../store_profile/${store.id}`)
     
 }
@@ -120,7 +121,8 @@ function starCreator(num) {
                         {/* {starCreator(3)} */}
                         {props.info.map(store =>
                             <>
-                                {/* {console.log(store)} */}
+
+                                {console.log(store)}
                                 <div className='singleInfo_res' onClick={() => routetoStore(store)}>
                                     {/* <img className='singleInfo_res_img' src={store.images} /> */}
                                     <img className='singleInfo_res_img' src={store.pro_pic} />
