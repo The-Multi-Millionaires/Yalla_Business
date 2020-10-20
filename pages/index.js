@@ -14,7 +14,7 @@ export default function Home(){
     setToken(tok[0]);
     console.log(tok[0]);
     if(tok[0]){
-      window.localStorage.setItem('name', tok[1]);
+      // window.localStorage.setItem('name', tok[1]);
       router.push('homepage')
     }
   }
