@@ -91,17 +91,17 @@ class Login extends Component {
               </div>
               <div className="signin">
                 <h1>sign in</h1>
-                <form className="more-padding" autoComplete="off">
+                {/* <form className="more-padding"> */}
                   <input type="text" name="username" placeholder="username" value={this.state.credentials.username}
                   onChange={this.inputChanged}/>
                   <input type="password" name="password" placeholder="password" value={this.state.credentials.password}
                   onChange={this.inputChanged}/>
-                  <div className="checkbox">
+                  {/* <div className="checkbox">
                     <input type="checkbox" id="remember" /><label htmlFor="remember">remember me</label>
-                  </div>
+                  </div> */}
         
                   <button onClick={this.login} className="button submit">login</button>
-                </form>
+                {/* </form> */}
               </div>
             </div>
             <div className="leftbox">
@@ -122,19 +122,7 @@ class Login extends Component {
             </div>
           </div>
         </div>
-        // {/* </body> */}
-        //   $('#signup').click(function() {
-        //   $('.pinkbox').css('transform', 'translateX(80%)');
-        //   $('.signin').addClass('nodisplay');
-        //   $('.signup').removeClass('nodisplay');
-        // });
         
-        //   $('#signin').click(function() {
-        //   $('.pinkbox').css('transform', 'translateX(0%)');
-        //   $('.signup').addClass('nodisplay');
-        //   $('.signin').removeClass('nodisplay');
-        // });
-        // {/* </html> */}
          
         
 
