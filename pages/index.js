@@ -24,7 +24,6 @@ export default function Home(){
       
 
       router.push('homepage')
-      
     }
   }
 

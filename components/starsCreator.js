@@ -15,7 +15,7 @@ function GetStar(props) {
 
     return (
         <>
-            <div className='rateME'>
+            <div>
                 {[...Array(5)].map((star, i) => {
                     const ratingValue = i + 1;
                     return (
