@@ -5,6 +5,32 @@ import { useRouter } from 'next/router'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome, faBookmark,  faUsers, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 
+
+var i ='qqqqqqq';
+class Localstorage extends Component{
+  constructor(props) {      
+      super(props);
+      this.state = {
+        user_id:0,
+        first_name:'mmmmmmmmmmm',
+        last_name:'',
+        thing: "things"
+      };
+
+    };
+
+    componentDidMount() {
+
+        const firstName = localStorage.getItem(this.props.name)
+        this.setState({first_name:firstName})  
+    }
+    render(){
+    return(<h2 className="userNameHeaderBar">{this.state.first_name}</h2>)
+    }
+}
+
+
+
 export default function Homepageheader(props){
     const router = useRouter();
   
@@ -20,26 +46,42 @@ export default function Homepageheader(props){
   
     return(
       <>
-         <header className="header">
-            <img src='/our-logo.png' className="logo"/>
-            <ul className="nav">
-                <li>osama</li>
-                <li><a  href='homepage'>
-            Signout</a></li>
-            </ul>
-        
+
           
-                {/* <form  class="flex-form" onSubmit={handleSubmit}>
-            <input type="search" name='search' id="searching" placeholder="Search"/>
-            <button type="submit" >Search</button>
-                </form> */}
-               
+      <header className='headerBar'>
+        <nav className="headerNavBar">
+
+          <h1 className='logoTitle'>Commentat</h1>
+
+          <ul className='newNavBar'>
+            <li className='newNavBarLI'>
+            <Link key='1' href="/homepage.js" as={`/home`}>                    
             
-          </header>
-          <form className="wraposama" onSubmit={handleSubmit} >
-              <input type="text" name='search' id="searching" placeholder='Search' className="searchTermosama"/> 
-              <button type="submit" className="searchButtonosama">Search </button> 
-          </form>
-          <p className="pfordana">Find any resturants , home services , and more ...</p>
+               <a href='/homepage.js'> Home </a>
+               </Link></li>
+            <li className='newNavBarLI'><a>All Stores</a></li>
+            <li className='newNavBarLI'><a>Catagories</a></li>
+            <li className='newNavBarLI'><a>About Us</a></li>
+          </ul>
+        </nav>
+
+         <div className='userHeaderInfo'>
+            <Localstorage name='firstName'/>
+            <a  href='homepage'>
+              <FontAwesomeIcon className='allheadericonns' icon={ faSignOutAlt} style={{ color: '#00a53c', width: '30px', height: '40px', marginTop:'16px'}} />
+            </a>
+          </div>
+      </header>
+
+        <div className='heroContainer'>
+           <div className='titleContainer'>
+              <p className="pfordana">Behind every comment is an experience that matters</p>
+              <form className="wraposama" onSubmit={handleSubmit} >
+                  <input type="text" name='search' id="searching" placeholder='Find restaurants, stores or anything!' className="searchTermosama"/> 
+                  <button type="submit" className="searchButtonosama">Search </button> 
+              </form>
+            </div>
+        </div>
+
       </>
   )}

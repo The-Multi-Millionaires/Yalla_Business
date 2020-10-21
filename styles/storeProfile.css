@@ -12,7 +12,7 @@
     margin: 6% 16% -4% 16%;
     height: 339px;
     padding: 3% 1% 0 2%;
-    box-shadow: 3px 5px 16px #204051;
+    box-shadow: -2px 4px 4px #ff5a00;
     border-radius: 4%;
 }
 
@@ -40,8 +40,9 @@
 }
 
 .storeInfo .profileLocation{
-    margin-top: 0.5%;
+    margin-top: 3.5%;
     color: gray;
+    margin-bottom: 3%;
 }
 
 .storeInfo .profileDescription{
@@ -53,7 +54,7 @@
 .storeInfo .storeHours{
     color: gray;
     font-weight: 600;
-    margin-top: 2%;
+    margin-top: 3%;
 }
 
 .storeInfo .storeHoursTime{
@@ -103,9 +104,11 @@ margin: 1% 15% 4% 15%;;
 .storeReviews{
     margin: 0 18%;
     background-color: white;
-    box-shadow: -1px 15px 36px #204051;
-    border-radius: 2%;
+    box-shadow: -1px 8px 6px #ff5a00;
+    border-radius: 19px;
+    -webkit-padding-after: 2%;
     padding-block-end: 2%;
+    -webkit-padding-before: 2%;
     padding-block-start: 2%;
 }
 
@@ -133,7 +136,7 @@ margin: 1% 15% 4% 15%;;
     margin-bottom: 8%;
     margin-left: 62px;
     font-weight: 700;
-    color: #660708;
+    color: #ff5a00;
     margin-top: 3%;
 }
 
@@ -184,7 +187,7 @@ margin: 1% 15% 4% 15%;;
     height: 143px;
     /* color: #f5f5f5; */
     box-shadow: 1px #bed9dc;
-    box-shadow: 3px 3px 4px #660708;
+    box-shadow: 3px 3px 4px #ff5a00;
 }
 
 
@@ -208,6 +211,6 @@ margin: 1% 15% 4% 15%;;
 
 .howMuch{
     color: gray;
-    margin: -27px 0px 7px 106px;
+    margin: -27px 0px 17px 106px;
     display: block;
 }
