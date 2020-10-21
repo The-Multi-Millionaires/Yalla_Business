@@ -3,12 +3,15 @@ import axios from 'axios'
 // import{FaStar} from 'react-icon/fa';
 
 import { faStar, faHighlighter } from '@fortawesome/free-solid-svg-icons';
+import $ from 'jquery';
 
 
 // function useHover() {
 //     const [value, setValue] = useState(false);
 // }
 import { library } from '@fortawesome/fontawesome-svg-core';
+import Header from '../../components/Header'
+
 
 // import your icons
 
@@ -58,7 +61,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 
 
 import ReviewForm from '../../components/ReviewForm'
-import Header from '../../components/Header'
+// import Header from '../../components/Header'
 // import StarRatingDemo from '../../components/starsCreator'
 import GetStar from '../../components/starsCreator'
 
@@ -105,7 +108,9 @@ class Home extends React.Component {
         console.log(item)
         this.setState({
             store_id:item,review_user_profile:firstName
-        })
+        });
+        // console.log($(body)
+        console.log($('.store_name_review_res').parent().parent().css('background-image','url(' + '/logo2.gif' +')'))
          
   
     }
@@ -125,7 +130,10 @@ class Home extends React.Component {
         return (
             <>
                 {/* <Header /> */}
+<Header />
+{/* <main className='main_res'> */}
 
+<h2 className='store_name_review_res'>Store</h2>
                 <div className="container_res">
                     < GetStar new_rate={this.rate_star} />
 
@@ -135,6 +143,7 @@ class Home extends React.Component {
                 
 
                 </div>
+{/* </main> */}
             </>
         )
     }
