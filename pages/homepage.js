@@ -29,7 +29,7 @@ export default function Home(props){
 
 
       
-      <Homepageheader />
+      <Header />
       </main>
       {/* <form onSubmit={handleSubmit} >
           <input type="text" name='search' placeholder='Search any store' id='searching'/>
