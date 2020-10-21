@@ -84,7 +84,10 @@ class Home extends React.Component {
         super(props);
         this.state = {
             rate: 0,
-            review_user_profile:"Unknown User",
+            review_user_profile: "Unknown User",
+            store_name: 'Unknown Store',
+            store_img_rev: 'https://lh3.googleusercontent.com/proxy/WGsJ71xPRNUXOrlp_N41W71f7lJ9gso5rBPVMLsPmgE5HAsBRcKUvLvHOFhExm_BPIBrhDLV9KrAakhmIxEF0CblFHUdM9AZq71VBKx1vRBdHdG09YROjGJ-XixEXw',
+
         }
         this.reviewCreateHandler = this.reviewCreateHandler.bind(this);
     }
@@ -97,22 +100,31 @@ class Home extends React.Component {
             "store_pic": review.Store_pic,
             "comment": review.Comment,
             "review_rate": this.state.rate,
-            "review_user_profile":this.state.review_user_profile
+            "review_user_profile": this.state.review_user_profile
         });
 
     }
 
     componentDidMount() {
-        const firstName=localStorage.getItem('firstName')
-        const item = localStorage.getItem('store_id',this.props.name)
+        const firstName = localStorage.getItem('firstName')
+        const item = localStorage.getItem('store_id', this.props.name)
+        const img = localStorage.getItem('img_url')
+        const store_name = localStorage.getItem('store_name_rev')
         console.log(item)
         this.setState({
-            store_id:item,review_user_profile:firstName
+            store_id: item, review_user_profile: firstName,
+            store_img_rev: img, store_name: store_name
+
         });
         // console.log($(body)
-        console.log($('.store_name_review_res').parent().parent().css('background-image','url(' + '/logo2.gif' +')'))
-         
-  
+        // console.log($('.store_name_review_res').parent().parent().css('background-image','url(' + '/logo2.gif' +')'))
+        // $('.store_name_review_res').parent().parent().css({'background-image':'url(' + 'https://www.seanfoster.co.nz/wp-content/uploads/2018/10/customer-service-five-stars-750.jpg' +')'})
+        // $('.div_name_image').parent().parent().css({ 'background-image': 'url(' + 'https://s3-eu-west-1.amazonaws.com/uploads.playbaamboozle.com/uploads/images/21359/1591744910_49812' + ')', 'background-size': 'cover' })
+        // "background":"#000",
+        // "color":"#000"
+        // https://www.seanfoster.co.nz/wp-content/uploads/2018/10/customer-service-five-stars-750.jpg
+
+
     }
     rate_star = star => {
         // let new_star= star ? star:0;
@@ -127,23 +139,33 @@ class Home extends React.Component {
 
 
     render() {
+        console.log(this.state, "00000000000")
         return (
             <>
                 {/* <Header /> */}
-<Header />
-{/* <main className='main_res'> */}
+                <Header />
+                {/* <main className='main_res'> */}
+<div className='twoimages_form_rev'>
 
-<h2 className='store_name_review_res'>Store</h2>
+
                 <div className="container_res">
                     < GetStar new_rate={this.rate_star} />
 
-                <div className="container">
-                    <ReviewForm onReviewCreate={this.reviewCreateHandler} />
-                </div>
-                
+                    <div className="container">
+                        <ReviewForm onReviewCreate={this.reviewCreateHandler} />
+                    </div>
+                    <div className='div_name_image'>
+                        <h2 className='store_name_review_res'>Store : {this.state.store_name}</h2>
+                        {/* <img className='imgae_rev_form_res' src={this.state.store_img_rev} /> */}
+
+                    </div>
 
                 </div>
-{/* </main> */}
+                <div className='imagenear_form_res'>
+                    <img src={this.state.store_img_rev} />
+                </div>
+</div>
+                {/* </main> */}
             </>
         )
     }

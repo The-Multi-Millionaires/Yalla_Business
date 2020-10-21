@@ -34,7 +34,7 @@ library.add(
 
 class Localstorage extends Component{
     constructor(props) {
-        console.group("0000000000000000000000000000")
+        console.group("0000000000000000000000000000",props)
         
         super(props);
         this.state = {
@@ -49,8 +49,10 @@ class Localstorage extends Component{
       };
   
       componentDidMount() {
-          
-          const item = localStorage.setItem('store_id',this.props.name)
+        // id={props.info.id} name={props.info.store_name} image={props.info.images}
+          const img=localStorage.setItem('img_url',this.props.image)
+          const item = localStorage.setItem('store_id',this.props.id)
+          const store_name_review=localStorage.setItem('store_name_rev',this.props.name)
           console.log(item)
           this.setState({store_id:'item'})
            
@@ -73,7 +75,7 @@ function starCreator(num) {
     for(var i =0;i<(5-num);i++){
         blacked.push('1');
     }
-    // console.log("***************",colored)
+    console.log("***************",colored)
   return (
       <>
       {/* <p>{num}</p> */}
@@ -94,7 +96,7 @@ function starCreator(num) {
 
 
 export default function singleView(props){
-    console.log(props)
+    console.log("storrrrrrrrrrrrrrrr",props)
     const router = useRouter()
 
     let filled_stars = props.info.review_rank
@@ -126,7 +128,7 @@ export default function singleView(props){
     return(
         <>
             <main className='storeProfileMain'>
-            <Localstorage  name={props.info.id}/>
+            <Localstorage  id={props.info.id} name={props.info.store_name} image={props.info.images}/>
 
                 <Header />
 
@@ -148,6 +150,7 @@ export default function singleView(props){
                         <span className='storeHoursTime'> {props.info.opening_times}</span>
                         
                         <p className='storePrice'> 💵 Price Range {price}</p>
+                        <a href="http://localhost:3005/review/review">Visit W3Schools.com!</a>
 
                     </div>
 
