@@ -10,6 +10,8 @@ import React from 'react'
 //     }
 //   }
 export default class ReviewForm extends React.Component {
+
+
     constructor(props) {
         super(props)
         this.state = {
@@ -19,6 +21,8 @@ export default class ReviewForm extends React.Component {
             Store_pic: '', 
             Comment:'', 
             Review_rate: 1,
+            review_user_profile:"Unknown"
+
         }
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -26,7 +30,13 @@ export default class ReviewForm extends React.Component {
     componentDidMount() {
         const first_name = localStorage.getItem('firstName')
         const user_id = localStorage.getItem('user_id')
-this.state.User_id=user_id;
+        const store_num=localStorage.getItem('store_id')
+
+this.setState({
+    User_id:user_id,
+    Store_id:store_num,
+    review_user_profile:first_name,
+})
         
 // this.state.
 
@@ -62,6 +72,7 @@ this.state.User_id=user_id;
             Store_pic: pic, 
             Comment: comment, 
             Review_rate: rate,
+            // review_user_profile:
         }), ()=>{
             // console.log(this.state);
              this.props.onReviewCreate(this.state);
@@ -72,13 +83,13 @@ this.state.User_id=user_id;
     render() {
         return (
             <form onSubmit={this.handleSubmit} className='formReview'> 
-                <input type="text" name='Userid' placeholder='User id' id='User_id'/>
-                <input type="text" name='Storeid' placeholder='store id' id='Store_id'/>
-                <input type="text" name='search' placeholder='location' id='Store_location'/>
-                <input type="text" name='search' placeholder='pic' id='Store_pic'/>
-                <input type="text" name='search' placeholder='comment' id='Comment'/>
-                <input type="text" name='search' placeholder='rate' id='Review_rate'/>
-                <button>ok</button>
+                <input className='user_id_res' type="text" name='Userid' placeholder='User id' id='User_id'/>
+                <input className='store_id_res' type="text" name='Storeid' placeholder='store id' id='Store_id'/>
+                <input className='store_location_id_res' type="text" name='search' placeholder='location' value='Amman,Jordan' id='Store_location'/>
+                <input className='store_image_id_res' type="text" name='search' placeholder='pic' id='Store_pic' value='No Image'/>
+                <input type="text" name='search' placeholder='ADD Your Comment' id='Comment'/>
+                <input className='rate_id_res' type="text" name='search' placeholder='rate' id='Review_rate'/>
+                <button>Post Review</button>
             </form>
         )
     }

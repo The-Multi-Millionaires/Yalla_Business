@@ -15,7 +15,7 @@ function GetStar(props) {
 
     return (
         <>
-            <div className='rateME'>
+            <div className='stars_creator_res'>
                 {[...Array(5)].map((star, i) => {
                     const ratingValue = i + 1;
                     return (
@@ -36,7 +36,7 @@ function GetStar(props) {
                         onMouseLeave={()=>setHover(null)}
                         /> */}
                             <FontAwesomeIcon icon={faStar} className='star'
-                                color={ratingValue <= (hover || rating) ? "#ffc107" : "#C0C0C0"}
+                                color={ratingValue <= (hover || rating) ? "#ff5a00" : "#C0C0C0"}
                                 size={100}
                                 onMouseOver={() => setHover(ratingValue)}
                                 onMouseLeave={() => setHover(null)} />
@@ -44,7 +44,7 @@ function GetStar(props) {
                     )
                 })}
             </div>
-            <p>{rating}</p>
+            {/* <p>{rating}</p> */}
         </>
     )
 }

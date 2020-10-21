@@ -2,14 +2,16 @@
 // import '../styles/header.css'
 // import '../styles/footer.css'
 // import '../styles/about.css'
+import '../styles/signin.scss'
 import '../styles/storeProfile.css'
 import '../styles/searchResults.css'
 import '../styles/header.css'
 import '../styles/reset.css'
-import '../styles/signin.scss'
 import '../styles/userprofile.css'
 import '../styles/reviewForm.css'
 import '../styles/stars.css'
+import '../styles/homepage.css'
+
 
 // import '../styles/starsRating.css'
 

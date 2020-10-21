@@ -13,9 +13,9 @@ $pink: darken($pale, 20%);
 $sans-serif: 'Open Sans', sans-serif;
 $serif: 'Lora', serif;
 
-body {
-  background: $lavender;
-}
+// body {
+//   background: $lavender;
+// }
 
 /* div box styling */
 .containerSignin {
@@ -26,7 +26,7 @@ body {
 }
 
 .welcome {
-  background: $white;
+  background: #ffffff;
   width: 650px;
   height: 415px;
   position: absolute;
@@ -39,8 +39,9 @@ body {
   position: absolute;
   top: -10%;
   left: 5%;
-  background: $pale;
   width: 320px;
+  background: #ff5a00;
+
   height: 500px;
   border-radius: 5px;
   box-shadow: 2px 0 10px rgba(0,0,0,.1);
@@ -67,14 +68,15 @@ body {
 }
 
 /* font & button styling */
-h1 {
-  font-family: $sans-serif;
-  text-align: center;
-  margin-top: 95px;
-  text-transform: uppercase;
-  color: $white;
-  font-size: 2em;
-  letter-spacing: 8px;
+.h1 {
+  font-family: "Open Sans", sans-serif;
+    text-align: center;
+    margin-top: 38px;
+    text-transform: uppercase;
+    color: #f6f6f6;
+    font-size: 2em;
+    letter-spacing: 8px;
+    margin-bottom: 30px;
 }
 
 .title {
@@ -93,37 +95,42 @@ h1 {
 .account {
   margin-top: 45%;
   font-size: 10px;
+  color: #00a53c;
+
 }
-p {
+.account, .desc {
   font-family: $sans-serif;
   font-size: .7em;
   letter-spacing: 2px;
   color: $gray;
   text-align: center;
+  color: #ff5a00;
+  padding-top: 16px;
+
+
 }
 
-span {
-  color: $pale;
+.span {
+  color: #00a53c;
 }
 
 .flower {
   position: absolute;
-  width: 120px;
-  height: 120px;
-  top: 46%;
-  left: 29%;
-  opacity: .7;
+    width: 322px;
+    height: 171px;
+    top: 33%;
+    left: 0%;
+    /* opacity: .7;*/
 }
 
 .smaller {
-  width: 90px;
-  height: 100px;
-  top: 48%;
-  left: 38%;
-  opacity: .9;
+  width: 296px;
+    height: 170px;
+    top: 32%;
+    left: 2%;
 }
 
-button {
+#abutton {
   padding: 12px;
   font-family: $sans-serif;
   text-transform: uppercase;
@@ -134,17 +141,17 @@ button {
   outline: none;
   display: block;
   &:hover {
-    background: $pale;
-    color: $white;
+    background: #00a53c;
+    color: #ff5a00;
     transition: background-color 1s ease-out;
   }
 }
 
-.button {
-  margin-top: 3%;
-  background: $white;
-  color: $pink;
-  border: solid 1px $pale;
+  .button {
+    margin-top: 3%;
+    background: #f6f6f6;
+    border: solid 1px #ff5a00;
+    color: #00a53c;
 }
 
 /* form styling */
@@ -157,7 +164,7 @@ form {
 }
 .more-padding{
   padding-top: 35px;
-  input {
+  .input {
     padding: 12px;
   }
   .submit {
@@ -167,29 +174,31 @@ form {
 .submit {
   margin-top: 25px;
   padding: 12px;
-  border-color: $pink;
+  border-color: #ff5a00;
+
   &:hover {
-    background: $lavender;
-    border-color: darken($lavender, 5%);
+    background: #00a53c;
+    border-color: #00a53c;
   }
 }
 
-input {
-  background: $pale;
-  width: 65%;
-  color: $pink;
+.input {
+  background: white;
+  width: 62%;
+  color: #00a53c;
   border: none;
-  border-bottom: 1px solid rgba($white, 0.5);
-  padding: 9px;
-  margin: 7px;
+  border-bottom: 1px solid rgba(246, 246, 246, 0.5);
+  padding: 10px;
+  margin: 7px 51px;
+
   &::placeholder {
-    color: rgba($white, 1);
+    color: #00a53c;
     letter-spacing: 2px;
     font-size: 1.3em;
     font-weight: 100;
   }
   &:focus {
-    color: $pink;
+    color: #00a53c;
     outline: none;
     border-bottom: 1.2px solid rgba($pink, 0.7);
     font-size: 1em;
@@ -200,12 +209,12 @@ input {
   }
 }
 
-label {
-  font-family: $sans-serif;
-  color: $pink;
-  font-size: 0.8em;
-  letter-spacing: 1px;
-}
+// label {
+//   font-family: $sans-serif;
+//   color: $pink;
+//   font-size: 0.8em;
+//   letter-spacing: 1px;
+// }
 
 .checkbox {
   display: inline;
@@ -215,7 +224,7 @@ label {
   top: 5px;
 }
 
-input[type=checkbox] {
+.input[type=checkbox] {
   width: 7px;
   background: $pink;
 }
@@ -223,4 +232,69 @@ input[type=checkbox] {
 .checkbox input[type="checkbox"]:checked + label {
   color: $pink;
   transition: .5s all ease;
+}
+
+
+
+// p.account {
+//   margin-top: 41px;
+// }
+// p#backword {
+//   font-size: 22px;
+// }
+
+
+
+button.button.submittt{
+
+margin-top: 25px;
+  padding: 12px;
+  border-color: #ff5a00;
+  margin-left: 130px;
+  border-radius: 10%;
+  // width: 21%;
+
+
+
+  &:hover {
+    background: #00a53c;
+    border-color: #00a53c;
+    color: #ff5a00;
+  }
+}
+
+button#signup{
+
+  margin-top: 25px;
+  padding: 12px;
+  border-color: #ff5a00;
+  margin-left: 130px;
+  border-radius: 10%;
+
+
+
+  &:hover {
+    background: #00a53c;
+    border-color: #00a53c;
+    color: #ff5a00;
+  }
+
+}
+
+button#signin{
+
+  margin-top: 25px;
+  padding: 12px;
+  border-color: #ff5a00;
+  margin-left: 130px;
+  border-radius: 10%;
+
+
+  &:hover {
+    background: #00a53c;
+    border-color: #00a53c;
+    color: #ff5a00;
+  }
+
+
 }

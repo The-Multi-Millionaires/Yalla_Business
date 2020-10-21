@@ -2,10 +2,14 @@ import styles from '../../styles.module.css'
 import { useRouter } from 'next/router'
 // import DisplayStoreReviews from '../../components/DisplayStoreReviews'
 import Header from '../../components/Header'
+import React, { Component, useState } from 'react'
 
 import { library } from '@fortawesome/fontawesome-svg-core';
-
-// import your icons
+// import Localstorage from '../../components/LocalStorage'
+// Localstorage
+import Footer from '../../components/Footer'
+import Homepageheader from '../../components/Homepageheader'
+// import your icons 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar, faHighlighter } from '@fortawesome/free-solid-svg-icons';
 import {
@@ -26,6 +30,42 @@ library.add(
 
 );
 
+
+
+
+class Localstorage extends Component{
+    constructor(props) {
+        console.group("0000000000000000000000000000",props)
+        
+        super(props);
+        this.state = {
+          user_id:0,
+          first_name:'mmmmmmmmmmm',
+          last_name:'',
+          store_id:'',
+          thing: "things"
+        };
+        // this.componentDidMount();
+        console.log("Props XXXX",this.props)
+      };
+  
+      componentDidMount() {
+        // id={props.info.id} name={props.info.store_name} image={props.info.images}
+          const img=localStorage.setItem('img_url',this.props.image)
+          const item = localStorage.setItem('store_id',this.props.id)
+          const store_name_review=localStorage.setItem('store_name_rev',this.props.name)
+          console.log(item)
+          this.setState({store_id:'item'})
+           
+    
+      }
+      render(){
+        // this.componentDidMount() 
+        // console.log("First name",this.state.first_name,i)
+    //   return(<h2 className="userNameHeaderBar">{this.state.first_name}</h2>)
+    return null
+      }
+  }
 function starCreator(num) {
     num=parseInt(num);
     let colored=[];
@@ -36,7 +76,7 @@ function starCreator(num) {
     for(var i =0;i<(5-num);i++){
         blacked.push('1');
     }
-    // console.log("***************",colored)
+    console.log("***************",colored)
   return (
       <>
       {/* <p>{num}</p> */}
@@ -57,6 +97,7 @@ function starCreator(num) {
 
 
 export default function singleView(props){
+    console.log("storrrrrrrrrrrrrrrr",props)
     const router = useRouter()
 
     let filled_stars = props.info.review_rank
@@ -88,8 +129,11 @@ export default function singleView(props){
     return(
         <>
             <main className='storeProfileMain'>
+            <Localstorage  id={props.info.id} name={props.info.store_name} image={props.info.images}/>
 
                 <Header />
+      {/* <Homepageheader /> */}
+
 
                 <div className="storeInfo">
 
@@ -109,6 +153,8 @@ export default function singleView(props){
                         <span className='storeHoursTime'> {props.info.opening_times}</span>
                         
                         <p className='storePrice'> 💵 Price Range {price}</p>
+                        {/* <a href="http://localhost:3005/review/review">Add Your review</a> */}
+                        <a href="https://yalla-business.vercel.app/review/review">Add Your review</a>
 
                     </div>
 
@@ -137,7 +183,7 @@ export default function singleView(props){
                                 <div className='nextToImg'>
                                     <>
                                     {/* {userName(1)} */}
-                                    <h4 className='userOfReviewName'>{props.users[index].username}</h4>
+                                    <h4 className='userOfReviewName'>{data.review_user_profile}</h4>
                                     <p className='locationOfReview'>{data.store_location}</p>
                                     </>
 
@@ -159,10 +205,13 @@ export default function singleView(props){
                 </div>
 
             </main>
+        <Footer />
+
      
         </>
     );
 }
+// var i=100;
 export async function getServerSideProps(context){
     const id=context.query.id
     // console.log(id);
@@ -172,15 +221,15 @@ export async function getServerSideProps(context){
     const res2= await fetch(`https://yalla-business-api.herokuapp.com/yalla_business_app/api/v1/review/?search=${id}&search_fields=store_id__id`)
     const singleData2 = await res2.json();
     // console.log(singleData2);
-    let allusers=[]
-    for(let i=0; i<singleData2.length; i++){
-        let res2= await fetch(`https://yalla-business-api.herokuapp.com/yalla_business_app/api/users/${singleData2[i].user_id}`)
-        let newUser = await res2.json();  
-        allusers.push(newUser)      
-    }
+    // let allusers=[]
+    // for(let i=0; i<singleData2.length; i++){
+    //     let res2= await fetch(`https://yalla-business-api.herokuapp.com/yalla_business_app/api/users/${singleData2[i].user_id}`)
+    //     let newUser = await res2.json();  
+    //     allusers.push(newUser)      
+    // }
 
     // console.log(allusers);
 
     // console.log(singleData2);
-    return {props: {info: singleData, review: singleData2, users: allusers}}
+    return {props: {info: singleData, review: singleData2}}
 }

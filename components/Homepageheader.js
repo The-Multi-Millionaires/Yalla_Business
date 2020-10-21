@@ -1,16 +1,12 @@
 import Link from 'next/link'
 import React, { Component, useState } from 'react'
 import { useRouter } from 'next/router'
-import Login from '../components/Login'
-// import '../styles/header.css'
-import {Redirect} from 'react-router'
-import { library } from '@fortawesome/fontawesome-svg-core';
 
-// import your icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome, faBookmark,  faUsers, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 
 
+var i ='qqqqqqq';
 class Localstorage extends Component{
   constructor(props) {      
       super(props);
@@ -32,47 +28,26 @@ class Localstorage extends Component{
     return(<h2 className="userNameHeaderBar">{this.state.first_name}</h2>)
     }
 }
-export default function Header(props){
-  const router = useRouter();
 
+
+
+export default function Homepageheader(props){
+    const router = useRouter();
   
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    let toSearch = e.target.searching.value;
-    // router.push('/')
-console.log("Path name",router.pathname)
-if(router.pathname=='/homepage'){
-
-  router.push('search/[id].js',`search/${toSearch}`,{ shallow: true })
-}else {
+  //   let name = window.localStorage.getItem('name');
+  //   console.log(name);
+    
+    const handleSubmit = (e) => {
+      e.preventDefault()
+      let toSearch = e.target.searching.value;
+      router.push('search/[id].js',`search/${toSearch}`)
+    }
   
+  
+    return(
+      <>
 
-}
-  }
-
-  return(
-    <>
-      {/* <header className='headerBar'>
-        <nav className="headerNavBar"> */}
-
-          {/* <h1 className='logoTitle'>Commentat</h1> */}
-          {/* <form className="wrap" onSubmit={handleSubmit} >
-              <input type="text" name='search' id="searching" placeholder='Search' className="searchTerm"/> 
-              <button type="submit" className="searchButton">Search </button> 
-          </form> */}
-
-         
-
-        {/* </nav>
-         <div className='userHeaderInfo'>
-            <Localstorage name='firstName'/>
-            <a  href='homepage'>
-              <FontAwesomeIcon className='allheadericonns' icon={ faSignOutAlt} style={{ color: '#00a53c', width: '30px', height: '40px', marginTop:'16px'}} />
-            </a>
-          </div>
-      </header> */}
-
-                
+          
       <header className='headerBar'>
         <nav className="headerNavBar">
 
@@ -80,7 +55,10 @@ if(router.pathname=='/homepage'){
 
           <ul className='newNavBar'>
             <li className='newNavBarLI'>
-               <a> Home </a></li>
+            <Link key='1' href="/homepage.js" as={`/home`}>                    
+            
+               <a href='/homepage.js'> Home </a>
+               </Link></li>
             <li className='newNavBarLI'><a>All Stores</a></li>
             <li className='newNavBarLI'><a>Catagories</a></li>
             <li className='newNavBarLI'><a>About Us</a></li>
@@ -94,5 +72,16 @@ if(router.pathname=='/homepage'){
             </a>
           </div>
       </header>
-    </>
-)}
+
+        <div className='heroContainer'>
+           <div className='titleContainer'>
+              <p className="pfordana">Behind every comment is an experience that matters</p>
+              <form className="wraposama" onSubmit={handleSubmit} >
+                  <input type="text" name='search' id="searching" placeholder='Find restaurants, stores or anything!' className="searchTermosama"/> 
+                  <button type="submit" className="searchButtonosama">Search </button> 
+              </form>
+            </div>
+        </div>
+
+      </>
+  )}

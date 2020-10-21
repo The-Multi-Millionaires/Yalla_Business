@@ -1,16 +1,33 @@
+
+.main_res{
+    /* background-image: url('/newest.jpg'); */
+    /* background-size: cover; */
+    /* height: 50em; */
+}
 .container_res{
-    border: 1px solid grey;
+    border: 2px solid #ff5a00;
+    box-shadow: 1px 1px 1px green;
     position: relative;
-    top:10em;
-    left:20em;
-    width: 60%;
+    top:5em;
+    left:10em;
+    border-radius: 5px;
+    width: 35%;
     padding: 1% 0;
+    height: 30em;
+    /* background-color: white; */
+    background-color: rgba(0,0,0,.8);
+
 }
 .container_res form >*{
+    box-shadow: 1px 1px 1px grey;
+
     display: block;
     position: relative;
     /* left: 10em; */
+    top: 10em;
     height:3em;
+    border-radius: 5px;
+
     width: 70%;
     margin: 0 0 1% 0;
     text-align: center;
@@ -24,7 +41,76 @@
   }
 
 .container_res form >:last-child{
+    /* text-align: right; */
     position: relative;
-    top:1em;
-    /* left:0em */
+    top:10em;
+    width: 30%;
+    background-color: rgb(0,128,0,0.8);
+    line-height: 10px;
+    left:9em;
+    color: white;
+}
+.container_res form >:last-child:hover{
+    transition: 100ms;
+    background-color: rgb(0,128,0,1);
+
+}
+
+.container_res form >:nth-child(5){
+    height: 18em;
+    margin-bottom: 10%;
+}
+
+
+.user_id_res,.store_id_res,.rate_id_res,.store_location_id_res,.store_image_id_res{
+    display: none !important;;
+}
+
+.store_name_review_res{
+    /* margin-left: 10%; */
+    /* margin: 1em 0 0 1em; */
+    color: white;
+    text-shadow: 1px 1px 1px grey;
+}
+
+.imgae_rev_form_res{
+    /* position: relative; */
+    display: block;
+    border-radius: 50%;
+    width: 5em;
+    padding-left: 10%;
+    /* position: relative;
+    top: 15em;
+    left: 20em; */
+    /* background-size: ; */
+    /* margin: 1% 1% 1% 1%; */
+}
+
+.div_name_image{
+    display: flex;
+    width: 30em;
+    position: absolute;
+    top: 1em;
+    left: -7em;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.twoimages_form_rev{
+    display: flex;
+    margin-left: 5em;
+}
+
+.imagenear_form_res{
+    position: relative;
+    top: 5em;
+    left: 10em;
+    height: 10em;
+}
+.imagenear_form_res img{
+    height: 31.8em;
+    width: 35em;
+    border: 2px solid #ff5a00;
+    border-radius: 2px;
+
 }
