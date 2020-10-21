@@ -153,7 +153,8 @@ export default function singleView(props){
                         <span className='storeHoursTime'> {props.info.opening_times}</span>
                         
                         <p className='storePrice'> 💵 Price Range {price}</p>
-                        <a href="http://localhost:3005/review/review">Add Your review</a>
+                        {/* <a href="http://localhost:3005/review/review">Add Your review</a> */}
+                        <a href="https://yalla-business.vercel.app/review/review">Add Your review</a>
 
                     </div>
 
