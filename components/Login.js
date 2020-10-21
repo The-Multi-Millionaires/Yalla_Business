@@ -16,9 +16,9 @@ class Login extends Component {
   }
 
   componentDidUpdate() {
-    console.log(this.state)
+    // console.log("from login page",this.state)
     localStorage.setItem('user_id', this.state.user_id) 
-    localStorage.setItem('firstName', this.state.first_name)  
+    localStorage.setItem('firstName', this.state.first_name||this.state.signUpCred.first_name)  
       // window.localStorage.setItem('user_id', tok[2]);
 
     // console.log("props",this.props)

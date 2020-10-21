@@ -11,11 +11,11 @@
     top:5em;
     left:10em;
     border-radius: 5px;
-    width: 30%;
+    width: 35%;
     padding: 1% 0;
     height: 30em;
     /* background-color: white; */
-    background-color: rgba(204,202,202,.4);
+    background-color: rgba(0,0,0,.8);
 
 }
 .container_res form >*{
@@ -67,9 +67,50 @@
 }
 
 .store_name_review_res{
-    position: absolute;
-    top: 8em;
-    left: 15em;
+    /* margin-left: 10%; */
     /* margin: 1em 0 0 1em; */
+    color: white;
     text-shadow: 1px 1px 1px grey;
+}
+
+.imgae_rev_form_res{
+    /* position: relative; */
+    display: block;
+    border-radius: 50%;
+    width: 5em;
+    padding-left: 10%;
+    /* position: relative;
+    top: 15em;
+    left: 20em; */
+    /* background-size: ; */
+    /* margin: 1% 1% 1% 1%; */
+}
+
+.div_name_image{
+    display: flex;
+    width: 30em;
+    position: absolute;
+    top: 1em;
+    left: -7em;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.twoimages_form_rev{
+    display: flex;
+    margin-left: 5em;
+}
+
+.imagenear_form_res{
+    position: relative;
+    top: 5em;
+    left: 10em;
+    height: 10em;
+}
+.imagenear_form_res img{
+    height: 31.8em;
+    width: 35em;
+    border: 2px solid #ff5a00;
+    border-radius: 2px;
+
 }
