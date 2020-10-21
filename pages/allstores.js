@@ -1,16 +1,16 @@
-import styles from '../../styles.module.css'
+import styles from '../styles.module.css'
 // import searchResults from '../../searchResults.module.css'
 // import '../../styles/storeProfile.css'
 // styles/storeProfile.css
-import Header from  '../../components/Header'
+import Header from  '../components/Header'
 import { useRouter } from 'next/router'
 // import the library
 import { library } from '@fortawesome/fontawesome-svg-core';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar, faHighlighter } from '@fortawesome/free-solid-svg-icons';
-import Footer from '../../components/Footer'
-import Homepageheader from '../../components/Homepageheader'
+import Footer from '../components/Footer'
+import Homepageheader from '../components/Homepageheader'
 
 
 
@@ -107,9 +107,9 @@ function starCreator(num) {
     );
 }
 export async function getServerSideProps(context) {
-    const id = context.query.id
+    // const id = context.query.id
     // console.log(id)
-    const res = await fetch(`https://yalla-business-api.herokuapp.com/yalla_business_app/api/v1/stores?search=${id}&search_fields=store_name`)
+    const res = await fetch(`https://yalla-business-api.herokuapp.com/yalla_business_app/api/v1/stores`)
     const singleData = await res.json();
-    return { props: { info: singleData,search_word:id } }
+    return { props: { info: singleData } }
 }
