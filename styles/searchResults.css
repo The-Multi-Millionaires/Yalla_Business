@@ -15,10 +15,10 @@
 .mainInfoDiv_res{
     position: relative;
     left: 9em;
-    top: 1px;
+    top: 3em;
     width: 80%;
     background-color: white;
-    box-shadow: 1px 12px 23px #204051;
+    box-shadow: 1px 12px 15px #204051;
     -webkit-padding-after: 2%;
     padding-block-end: 2%;
     /* display: -webkit-flex; */
