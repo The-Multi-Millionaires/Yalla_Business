@@ -7,8 +7,9 @@ import React, { Component, useState } from 'react'
 import { library } from '@fortawesome/fontawesome-svg-core';
 // import Localstorage from '../../components/LocalStorage'
 // Localstorage
-
-// import your icons
+import Footer from '../../components/Footer'
+import Homepageheader from '../../components/Homepageheader'
+// import your icons 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar, faHighlighter } from '@fortawesome/free-solid-svg-icons';
 import {
@@ -131,6 +132,8 @@ export default function singleView(props){
             <Localstorage  id={props.info.id} name={props.info.store_name} image={props.info.images}/>
 
                 <Header />
+      {/* <Homepageheader /> */}
+
 
                 <div className="storeInfo">
 
@@ -201,6 +204,8 @@ export default function singleView(props){
                 </div>
 
             </main>
+        <Footer />
+
      
         </>
     );
