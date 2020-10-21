@@ -153,7 +153,7 @@ export default function singleView(props){
                         <span className='storeHoursTime'> {props.info.opening_times}</span>
                         
                         <p className='storePrice'> 💵 Price Range {price}</p>
-                        <a href="http://localhost:3005/review/review">Visit W3Schools.com!</a>
+                        <a href="http://localhost:3005/review/review">Add Your review</a>
 
                     </div>
 

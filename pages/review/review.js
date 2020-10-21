@@ -93,6 +93,8 @@ class Home extends React.Component {
     }
 
     async reviewCreateHandler(review) {
+        console.log("Thid from post ",this.state.review_user_profile,review.Store_pic,review.Comment,this.state.rate,review.Store_location)
+
         const response = await axios.post(url, {
             "user_id": 1,
             "store_id": 1,
@@ -114,8 +116,9 @@ class Home extends React.Component {
         this.setState({
             store_id: item, review_user_profile: firstName,
             store_img_rev: img, store_name: store_name
-
+            
         });
+        console.log(this.state.review_user_profile)
         // console.log($(body)
         // console.log($('.store_name_review_res').parent().parent().css('background-image','url(' + '/logo2.gif' +')'))
         // $('.store_name_review_res').parent().parent().css({'background-image':'url(' + 'https://www.seanfoster.co.nz/wp-content/uploads/2018/10/customer-service-five-stars-750.jpg' +')'})
