@@ -79,8 +79,11 @@ if(router.pathname=='/homepage'){
           <h1 className='logoTitle'>Commentat</h1>
 
           <ul className='newNavBar'>
+          <Link key='1' href="/homepage.js" as={`/homepage`}>
+
             <li className='newNavBarLI'>
                <a> Home </a></li>
+               </Link>
             <li className='newNavBarLI'><a>All Stores</a></li>
             <li className='newNavBarLI'><a>Catagories</a></li>
             <li className='newNavBarLI'><a>About Us</a></li>

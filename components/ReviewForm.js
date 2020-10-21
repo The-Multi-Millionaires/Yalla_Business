@@ -28,6 +28,7 @@ export default class ReviewForm extends React.Component {
     }
 
     componentDidMount() {
+        // console.log(,props)
         const first_name = localStorage.getItem('firstName')
         const user_id = localStorage.getItem('user_id')
         const store_num=localStorage.getItem('store_id')

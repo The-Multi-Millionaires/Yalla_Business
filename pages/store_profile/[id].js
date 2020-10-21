@@ -154,18 +154,17 @@ export default function singleView(props){
                         
                         <p className='storePrice'> 💵 Price Range {price}</p>
                         <a href="http://localhost:3005/review/review">Add Your review</a>
+                        {/* <a href="https://yalla-business.vercel.app/review/review">Add Your review</a> */}
 
                     </div>
 
                 </div>
                 <hr className="solid" />
                 <div className='storePics'>
-                    <img className='storeImgs' src={props.info.images} />
-                    <img className='storeImgs' src={props.info.images} />
-                    <img className='storeImgs' src={props.info.images} />
-                    <img className='storeImgs' src={props.info.images} />
-                    <img className='storeImgs' src={props.info.images} />
-                    <img className='storeImgs' src={props.info.images} />
+                {props.info.images.split(';').map((data,index) =>
+                    <img className='storeImgs' src={data} />
+                    )}
+                    
                 </div>
 
                 <hr className="solid2" />
