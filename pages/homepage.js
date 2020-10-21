@@ -49,7 +49,7 @@ export default function Home(props){
                     <Link key='2' href="/category/[id].js" as={`/category/Clothes`}>                    
                     <a href="/{1}">
                         <div className="conts">
-                        <div  className="cont">
+                        <div  className="cont2">
                             <div className="imgCover">
                                 <h2>Clothes</h2>
                             </div>
@@ -61,7 +61,7 @@ export default function Home(props){
                     <Link key='3' href="/category/[id].js" as={`/category/Services`}>                    
                     <a href="/{1}">
                         <div className="conts">
-                            <div  className="cont">
+                            <div  className="cont3">
                             <div className="imgCover">
                                 <h2>Services</h2>
                             </div>
@@ -74,7 +74,7 @@ export default function Home(props){
 
                     <a href="/sport">
                         <div className="conts">
-                            <div  className="cont">
+                            <div  className="cont4">
                             <div className="imgCover">
                                 <h2>Fashion</h2>
                             </div>
@@ -89,7 +89,7 @@ export default function Home(props){
                 <Link key='5' href="/category/[id].js" as={`/category/Beauty`}>                    
                     <a href="/health">
                         <div className="conts">
-                            <div  className="cont">
+                            <div  className="cont5">
                             <div className="imgCover">
                                 <h2>Beauty</h2>
                             </div>
@@ -102,7 +102,7 @@ export default function Home(props){
                 <Link key='6' href="/category/[id].js" as={`/category/Entertainment`}>                    
                     <a href="/tech">
                         <div className="conts">
-                            <div  className="cont">
+                            <div  className="cont6">
                             <div className="imgCover">
                                 <h2 >Entertainment</h2>
                             </div>
@@ -114,7 +114,7 @@ export default function Home(props){
                     <Link key='7' href="/category/[id].js" as={`/category/Education`}>                    
                     <a href="/{1}">
                         <div className="conts">
-                            <div  className="cont">
+                            <div  className="cont7">
                             <div className="imgCover">
                                 <h2>Education</h2>
                             </div>
@@ -126,7 +126,7 @@ export default function Home(props){
                     <Link key='8' href="/category/[id].js" as={`/category/Electrical`}>                    
                     <a href="/{1}">
                         <div className="conts">
-                            <div  className="cont">
+                            <div  className="cont8">
                             <div className="imgCover">
                                 <h2>Electrical</h2>
                             </div>
