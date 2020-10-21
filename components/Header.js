@@ -3,30 +3,14 @@ import React, { Component, useState } from 'react'
 import { useRouter } from 'next/router'
 import Login from '../components/Login'
 // import '../styles/header.css'
-
+import {Redirect} from 'react-router'
 import { library } from '@fortawesome/fontawesome-svg-core';
 
 // import your icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome, faBookmark,  faUsers, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
-// import {
-//     faGithubAlt,
-//     faGoogle,
-//     faFacebook,
-//     faTwitter,
-
-// } from '@fortawesome/free-brands-svg-icons';
-
-// library.add(
 
 
-//     faGithubAlt,
-//     faGoogle,
-//     faFacebook,
-//     faTwitter,
-
-// );
-var i ='qqqqqqq';
 class Localstorage extends Component{
   constructor(props) {      
       super(props);
@@ -55,7 +39,15 @@ export default function Header(props){
   const handleSubmit = (e) => {
     e.preventDefault()
     let toSearch = e.target.searching.value;
-    router.push('search/[id].js',`search/${toSearch}`)
+    // router.push('/')
+console.log("Path name",router.pathname)
+if(router.pathname=='/homepage'){
+
+  router.push('search/[id].js',`search/${toSearch}`,{ shallow: true })
+}else {
+  
+
+}
   }
 
   return(
