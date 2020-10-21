@@ -242,3 +242,59 @@ form {
 // p#backword {
 //   font-size: 22px;
 // }
+
+
+
+button.button.submittt{
+
+margin-top: 25px;
+  padding: 12px;
+  border-color: #ff5a00;
+  margin-left: 130px;
+  border-radius: 10%;
+  // width: 21%;
+
+
+
+  &:hover {
+    background: #00a53c;
+    border-color: #00a53c;
+    color: #ff5a00;
+  }
+}
+
+button#signup{
+
+  margin-top: 25px;
+  padding: 12px;
+  border-color: #ff5a00;
+  margin-left: 130px;
+  border-radius: 10%;
+
+
+
+  &:hover {
+    background: #00a53c;
+    border-color: #00a53c;
+    color: #ff5a00;
+  }
+
+}
+
+button#signin{
+
+  margin-top: 25px;
+  padding: 12px;
+  border-color: #ff5a00;
+  margin-left: 130px;
+  border-radius: 10%;
+
+
+  &:hover {
+    background: #00a53c;
+    border-color: #00a53c;
+    color: #ff5a00;
+  }
+
+
+}

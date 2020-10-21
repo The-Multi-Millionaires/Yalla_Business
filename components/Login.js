@@ -160,7 +160,7 @@ class Login extends Component {
                   onChange={this.inputChangedSignUp} className='input'/>
                   <input type="password" placeholder="confirm password" name="passwordsec" value={this.state.signUpCred.passwordsec}
                   onChange={this.inputChangedSignUp} className='input'/>
-                  <button onClick={this.register} id='abutton' className="button submit">create account </button>
+                  <button onClick={this.register} id='abutton' className="button submittt">create account </button>
                 {/* </form> */}
               </div>
               <div className="signin">
@@ -174,7 +174,7 @@ class Login extends Component {
                     <input type="checkbox" id="remember" /><label htmlFor="remember">remember me</label>
                   </div> */}
         
-                  <button onClick={this.login} className="button submit">login</button>
+                  <button onClick={this.login} className="button submittt">login</button>
                 {/* </form> */}
               </div>
             </div>
