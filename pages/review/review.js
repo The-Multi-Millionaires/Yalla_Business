@@ -12,47 +12,7 @@ import $ from 'jquery';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import Header from '../../components/Header'
 
-
-// import your icons
-
-// const {useState} = React;
-
-// const StarRating = ()=> {
-//         const [rating,setRating] = useState(null);
-//         const [hover,setHover]= useState(null);
-//         // const [hover,setHover]=useHover();
-
-//         return(
-//             <>
-//             <div>
-//                 {[...Array(5)].map((star,i)=>{
-//                     const ratingValue = i +1;
-//                     return (
-//                         <label>
-//                             <input
-//                             type='radio'
-//                             name='rating'
-//                             value={ratingValue}
-//                             onClick={() =>setRating(ratingValue)}
-//                             onMouseOver={()=>setHover(ratingValue)}
-//                             onMouseLeave={()=>setHover(null)}
-//                             />
-//                             <faStar
-//                             className='star'
-//                             color={ratingValue <=(hover || rating) ? "#ffc107" : "#e4e59"}
-//                             size={100}
-//                             onMouseOver={()=>setHover(ratingValue)}
-//                             onMouseLeave={()=>setHover(null)}
-//                             />
-
-//                         </label>
-//                     )
-//                 })}
-//             </div>
-//             <p>{rating}</p>
-//             </>
-//         )
-//     }
+import { useRouter } from 'next/router'
 
 
 
@@ -64,6 +24,7 @@ import ReviewForm from '../../components/ReviewForm'
 // import Header from '../../components/Header'
 // import StarRatingDemo from '../../components/starsCreator'
 import GetStar from '../../components/starsCreator'
+import { Router } from 'next/router';
 
 // if (!window) {
 //     require('localstorage-polyfill');
@@ -74,7 +35,7 @@ import GetStar from '../../components/starsCreator'
 // }
 // componentDidMount()
 
-
+// const router = useRouter()
 const url = 'https://yalla-business-api.herokuapp.com/yalla_business_app/api/v1/review/';
 // const url = 'https://snacksapi.herokuapp.com/api/v1/snacks/';
 
@@ -93,29 +54,32 @@ class Home extends React.Component {
     }
 
     async reviewCreateHandler(review) {
-        console.log("Thid from post ",this.state.review_user_profile,review.Store_pic,review.Comment,this.state.rate,review.Store_location)
+        console.log("Thid from post ",this.state.review_user_profile,review.Store_pic,review.Comment,this.state.rate,review.Store_location,this.state.user_id)
 
         const response = await axios.post(url, {
-            "user_id": 1,
-            "store_id": 1,
+            "user_id": this.state.user_id,
+            "store_id": this.state.store_id,
             "store_location": review.Store_location,
             "store_pic": review.Store_pic,
             "comment": review.Comment,
             "review_rate": this.state.rate,
             "review_user_profile": this.state.review_user_profile
         });
+        
+        // router.push('/homepage')
 
     }
 
     componentDidMount() {
+        const user=localStorage.getItem('user_id')
         const firstName = localStorage.getItem('firstName')
         const item = localStorage.getItem('store_id', this.props.name)
         const img = localStorage.getItem('img_url')
         const store_name = localStorage.getItem('store_name_rev')
-        console.log(item)
+        console.log("id for store",item)
         this.setState({
             store_id: item, review_user_profile: firstName,
-            store_img_rev: img, store_name: store_name
+            store_img_rev: img, store_name: store_name,user_id:user
             
         });
         console.log(this.state.review_user_profile)
