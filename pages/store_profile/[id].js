@@ -51,10 +51,11 @@ class Localstorage extends Component{
   
       componentDidMount() {
         // id={props.info.id} name={props.info.store_name} image={props.info.images}
+        const new_img=localStorage.setItem('new_img',this.props.new_img)
           const img=localStorage.setItem('img_url',this.props.image)
           const item = localStorage.setItem('store_id',this.props.id)
           const store_name_review=localStorage.setItem('store_name_rev',this.props.name)
-          console.log(item)
+          console.log("NNNNNNNNNNNNNNNEW Imag",new_img)
           this.setState({store_id:'item'})
            
     
@@ -129,7 +130,7 @@ export default function singleView(props){
     return(
         <>
             <main className='storeProfileMain'>
-            <Localstorage  id={props.info.id} name={props.info.store_name} image={props.info.images}/>
+            <Localstorage  id={props.info.id} name={props.info.store_name} image={props.info.images} new_img={props.info.pro_pic}/>
 
                 <Header />
       {/* <Homepageheader /> */}
