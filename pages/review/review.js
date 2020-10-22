@@ -48,7 +48,7 @@ class Home extends React.Component {
             review_user_profile: "Unknown User",
             store_name: 'Unknown Store',
             store_img_rev: 'https://lh3.googleusercontent.com/proxy/WGsJ71xPRNUXOrlp_N41W71f7lJ9gso5rBPVMLsPmgE5HAsBRcKUvLvHOFhExm_BPIBrhDLV9KrAakhmIxEF0CblFHUdM9AZq71VBKx1vRBdHdG09YROjGJ-XixEXw',
-
+            review_user_pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSYNQCl5AwQhKoWfRaVb5UnaRJOAbiqOw8rGg&usqp=CAU'
         }
         this.reviewCreateHandler = this.reviewCreateHandler.bind(this);
     }
@@ -57,13 +57,15 @@ class Home extends React.Component {
         console.log("Thid from post ",this.state.review_user_profile,review.Store_pic,review.Comment,this.state.rate,review.Store_location,this.state.user_id)
 
         const response = await axios.post(url, {
-            "user_id": this.state.user_id,
+            "user_id": this.state.user_id,  
             "store_id": this.state.store_id,
             "store_location": review.Store_location,
             "store_pic": review.Store_pic,
             "comment": review.Comment,
             "review_rate": this.state.rate,
-            "review_user_profile": this.state.review_user_profile
+            "review_user_profile": this.state.review_user_profile,
+            "review_user_pic": this.state.review_user_pic
+
         });
         
         // router.push('/homepage')
@@ -77,10 +79,14 @@ class Home extends React.Component {
         const img = localStorage.getItem('new_img')
         console.log(img)
         const store_name = localStorage.getItem('store_name_rev')
+        const userpicrev = localStorage.getItem('userpicrev')
+
         console.log("id for store",item)
         this.setState({
             store_id: item, review_user_profile: firstName,
-            store_img_rev: img, store_name: store_name,user_id:user
+            store_img_rev: img, store_name: store_name,user_id:user,
+            review_user_pic:userpicrev
+
             
         });
         console.log(this.state.review_user_profile)

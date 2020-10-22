@@ -21,7 +21,9 @@ export default class ReviewForm extends React.Component {
             Store_pic: '', 
             Comment:'', 
             Review_rate: 1,
-            review_user_profile:"Unknown"
+            review_user_profile:"Unknown",
+            review_user_pic:"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSYNQCl5AwQhKoWfRaVb5UnaRJOAbiqOw8rGg&usqp=CAU",
+
 
         }
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -32,11 +34,15 @@ export default class ReviewForm extends React.Component {
         const first_name = localStorage.getItem('firstName')
         const user_id = localStorage.getItem('user_id')
         const store_num=localStorage.getItem('store_id')
+        const userpicrev=localStorage.getItem('userpicrev')
+
 
 this.setState({
     User_id:user_id,
     Store_id:store_num,
     review_user_profile:first_name,
+    review_user_pic:userpicrev,
+
 })
         
 // this.state.

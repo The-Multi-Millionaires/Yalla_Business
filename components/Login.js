@@ -11,7 +11,8 @@ class Login extends Component {
 
   state = {
     credentials: {username: '', password: ''},
-    signUpCred: {first_name:'',last_name:'',username: '', email:'' ,password: '', passwordsec:''}
+    signUpCred: {first_name:'',last_name:'',username: '', email:'' ,password: '', passwordsec:''},
+    userpicrev: {last_name:'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSYNQCl5AwQhKoWfRaVb5UnaRJOAbiqOw8rGg&usqp=CAU'}
 
   }
 
@@ -19,6 +20,8 @@ class Login extends Component {
     // console.log("from login page",this.state)
     localStorage.setItem('user_id', this.state.user_id) 
     localStorage.setItem('firstName', this.state.first_name||this.state.signUpCred.first_name)  
+    localStorage.setItem('userpicrev', this.state.last_name||this.state.userpicrev.last_name)  
+
       // window.localStorage.setItem('user_id', tok[2]);
 
     // console.log("props",this.props)
@@ -43,6 +46,8 @@ class Login extends Component {
           this.state.user_id=elem.id;
           this.state.user_obj=elem;
           this.state.first_name=elem.first_name
+          this.state.last_name=elem.last_name
+
           
 
   var user_id=elem.id;
@@ -91,7 +96,7 @@ class Login extends Component {
         "username": this.state.signUpCred.username,
         "password": this.state.signUpCred.password,
         "first_name": this.state.signUpCred.first_name,
-        "last_name": this.state.signUpCred.last_name,
+        "last_name": this.state.userpicrev.last_name,
         "email": this.state.signUpCred.email
     });
 
