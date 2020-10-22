@@ -214,3 +214,20 @@ margin: 1% 15% 4% 15%;;
     margin: -27px 0px 17px 106px;
     display: block;
 }
+
+.reviewButton{
+    margin: -29px 0 -2px 373px;
+    border: none;
+    height: 54px;
+    background-color: #ff5a00;
+    border-radius: 15px;
+    width: 167px;
+    color: whitesmoke;
+}
+
+.reviewButton a{
+    color: whitesmoke;
+    font-size: 15px;
+    font-weight: 900;
+    text-decoration: none;
+}

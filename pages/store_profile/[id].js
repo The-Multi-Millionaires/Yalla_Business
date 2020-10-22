@@ -153,9 +153,11 @@ export default function singleView(props){
                         <span className='storeHoursTime'> {props.info.opening_times}</span>
                         
                         <p className='storePrice'> 💵 Price Range {price}</p>
-                        <a href="http://localhost:3005/review/review">Add Your review</a>
-                        {/* <a href="https://yalla-business.vercel.app/review/review">Add Your review</a> */}
-
+                        <button className='reviewButton'> 
+                        <a href="http://localhost:3005/review/review"><FontAwesomeIcon icon={faStar} style={{opacity: '0.5'}} />
+Write a Review</a>
+                            {/* <a href="https://yalla-business.vercel.app/review/review"> ☆ Write A Review</a> */}
+                        </button>
                     </div>
 
                 </div>
@@ -177,7 +179,7 @@ export default function singleView(props){
                         <>
                         <section className='allReviews'>
                             <div className='userReviewToStore'>
-                                <img className='userOfReviewPic' src='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSYNQCl5AwQhKoWfRaVb5UnaRJOAbiqOw8rGg&usqp=CAU'/>
+                                <img className='userOfReviewPic' src={data.review_user_pic}/>
                                 <div className='nextToImg'>
                                     <>
                                     {/* {userName(1)} */}
