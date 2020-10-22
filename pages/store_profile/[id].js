@@ -155,7 +155,7 @@ export default function singleView(props){
                         
                         <p className='storePrice'> 💵 Price Range {price}</p>
                         <button className='reviewButton'> 
-                        <a href="http://localhost:3005/review/review"><FontAwesomeIcon icon={faStar} style={{opacity: '0.5'}} />
+                        <a href="https://yalla-business.vercel.app/review/review"><FontAwesomeIcon icon={faStar} style={{opacity: '0.5'}} />
 Write a Review</a>
                             {/* <a href="https://yalla-business.vercel.app/review/review"> ☆ Write A Review</a> */}
                         </button>
