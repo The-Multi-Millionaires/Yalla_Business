@@ -76,7 +76,8 @@ class Home extends React.Component {
         const user=localStorage.getItem('user_id')
         const firstName = localStorage.getItem('firstName')
         const item = localStorage.getItem('store_id', this.props.name)
-        const img = localStorage.getItem('img_url')
+        const img = localStorage.getItem('new_img')
+        console.log(img)
         const store_name = localStorage.getItem('store_name_rev')
         const userpicrev = localStorage.getItem('userpicrev')
 
