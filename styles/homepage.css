@@ -134,7 +134,7 @@
   height: 241px;
   margin-bottom: 3%;
   width: 262px;
-  background-image: url('/bk2.jpg');
+  background-image: url('https://www.cdc.gov/foodsafety/images/comms/food-Safety-Tips-small.jpg');
   /* opacity: .5; */
 }
 .contents a{
@@ -180,12 +180,12 @@ footer{
 }
 
 footer{
-  margin: 3% 0 0 0;
+  /* margin: 5% 0 0 0; */
   background-color: rgb(38,38,38);
   
   opacity: .9;
   /* padding: 2% 0 1% 0; */
-  margin: 3% 0 0 0;
+  margin: 5% 0 0 0;
   position: static;
   bottom: 0;
   width: 100%;
@@ -247,7 +247,7 @@ footer{
 }
 
 #footerNav ul li a{
-  border-left: 2px solid rgba(157, 2, 8, .85);
+  border-left: 2px solid #ff5a00;
   padding: 0 10px;
   color: #f5f5f5;
   font-size: 20px;
@@ -343,4 +343,76 @@ margin: 1% 0 0 9%;
   color: #ff5a00;
   font-weight: 900;
   margin-bottom: 6%;
+}
+
+.cont2{
+  border: 1px solid #204051;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px #204051;
+  height: 241px;
+  margin-bottom: 3%;
+  width: 262px;
+  background-image: url('https://cdn.cheapism.com/images/Landsend.2e16d0ba.fill-1440x605.jpg');
+  /* opacity: .5; */
+}
+
+.cont3{
+  border: 1px solid #204051;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px #204051;
+  height: 241px;
+  margin-bottom: 3%;
+  width: 262px;
+  background-image: url('https://image.shutterstock.com/image-photo/set-construction-tools-house-renovation-260nw-193420553.jpg');
+  /* opacity: .5; */
+}
+.cont4{
+  border: 1px solid #204051;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px #204051;
+  height: 241px;
+  margin-bottom: 3%;
+  width: 262px;
+  background-image: url('https://www.chowrangi.pk/wp-content/uploads/2016/04/fashion-in-pakistan.jpg');
+  /* opacity: .5; */
+}
+.cont5{
+  border: 1px solid #204051;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px #204051;
+  height: 241px;
+  margin-bottom: 3%;
+  width: 262px;
+  background-image: url('https://www.junglescout.com/wp-content/uploads/2018/06/makeup-display.png');
+  /* opacity: .5; */
+}
+.cont6{
+  border: 1px solid #204051;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px #204051;
+  height: 241px;
+  margin-bottom: 3%;
+  width: 262px;
+  background-image: url('https://360flex.org/wp-content/uploads/2016/02/entertainment.jpg');
+  /* opacity: .5; */
+}
+.cont7{
+  border: 1px solid #204051;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px #204051;
+  height: 241px;
+  margin-bottom: 3%;
+  width: 262px;
+  background-image: url('https://cdn.shortpixel.ai/client/q_glossy,ret_img,w_800/https://netuup.gr/wp-content/uploads/2020/07/education-and-reading-concept-group-of-old-colorfu-7Y92QMP.jpg');
+  /* opacity: .5; */
+}
+.cont8{
+  border: 1px solid #204051;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px #204051;
+  height: 241px;
+  margin-bottom: 3%;
+  width: 262px;
+  background-image: url('https://www.allaboutcircuits.com/uploads/articles/electronics.jpg');
+  /* opacity: .5; */
 }

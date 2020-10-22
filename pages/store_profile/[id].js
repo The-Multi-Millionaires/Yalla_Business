@@ -51,10 +51,11 @@ class Localstorage extends Component{
   
       componentDidMount() {
         // id={props.info.id} name={props.info.store_name} image={props.info.images}
+        const new_img=localStorage.setItem('new_img',this.props.new_img)
           const img=localStorage.setItem('img_url',this.props.image)
           const item = localStorage.setItem('store_id',this.props.id)
           const store_name_review=localStorage.setItem('store_name_rev',this.props.name)
-          console.log(item)
+          console.log("NNNNNNNNNNNNNNNEW Imag",new_img)
           this.setState({store_id:'item'})
            
     
@@ -129,7 +130,7 @@ export default function singleView(props){
     return(
         <>
             <main className='storeProfileMain'>
-            <Localstorage  id={props.info.id} name={props.info.store_name} image={props.info.images}/>
+            <Localstorage  id={props.info.id} name={props.info.store_name} image={props.info.images} new_img={props.info.pro_pic}/>
 
                 <Header />
       {/* <Homepageheader /> */}
@@ -153,20 +154,20 @@ export default function singleView(props){
                         <span className='storeHoursTime'> {props.info.opening_times}</span>
                         
                         <p className='storePrice'> 💵 Price Range {price}</p>
-                        {/* <a href="http://localhost:3005/review/review">Add Your review</a> */}
-                        <a href="https://yalla-business.vercel.app/review/review">Add Your review</a>
-
+                        <button className='reviewButton'> 
+                        <a href="http://localhost:3005/review/review"><FontAwesomeIcon icon={faStar} style={{opacity: '0.5'}} />
+Write a Review</a>
+                            {/* <a href="https://yalla-business.vercel.app/review/review"> ☆ Write A Review</a> */}
+                        </button>
                     </div>
 
                 </div>
                 <hr className="solid" />
                 <div className='storePics'>
-                    <img className='storeImgs' src={props.info.images} />
-                    <img className='storeImgs' src={props.info.images} />
-                    <img className='storeImgs' src={props.info.images} />
-                    <img className='storeImgs' src={props.info.images} />
-                    <img className='storeImgs' src={props.info.images} />
-                    <img className='storeImgs' src={props.info.images} />
+                {props.info.images.split(';').map((data,index) =>
+                    <img className='storeImgs' src={data} />
+                    )}
+                    
                 </div>
 
                 <hr className="solid2" />
@@ -179,7 +180,7 @@ export default function singleView(props){
                         <>
                         <section className='allReviews'>
                             <div className='userReviewToStore'>
-                                <img className='userOfReviewPic' src='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSYNQCl5AwQhKoWfRaVb5UnaRJOAbiqOw8rGg&usqp=CAU'/>
+                                <img className='userOfReviewPic' src={data.review_user_pic}/>
                                 <div className='nextToImg'>
                                     <>
                                     {/* {userName(1)} */}

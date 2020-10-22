@@ -43,15 +43,15 @@ export default function Header(props){
         <div id="footer">
             <nav id="footerNav">
                 <ul>
-                    <li><a href="/news">Home</a></li>
-                    <li><a href="/sport">All Stores</a></li>
+                    <li><a href="/homepage">Home</a></li>
+                    <li><a href="/allstores">All Stores</a></li>
                     <li><a href="/health">Categories</a></li>
                     <li><a href="/tech">About Us</a></li>
-                    <li><a href="">About</a></li>
+                    {/* <li><a href="">About</a></li> */}
                 </ul>
             </nav>
             <div id="logo1">
-                <img src="/our-logo.png" alt="" />
+                <img src="/commentat.png" alt="" />
 
             </div> 
             <div id="logo2">
