@@ -1,22 +1,57 @@
-# Basic CSS example
+# Commentat
 
-Next.js has built-in support for [CSS Modules](https://nextjs.org/docs/basic-features/built-in-css-support#adding-component-level-css) allowing you to write scoped CSS by automatically creating a unique class name. CSS Module files can be imported anywhere in your application and you don't have to worry about collisions.
+Commentat is a social site for everything local, a site that helps you choose one business
+over the other based on ratings and reviews. 
 
-## Deploy your own
+______
 
-Deploy the example using [Vercel](https://vercel.com):
+## Table Of Contents
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/vercel/next.js/tree/canary/examples/basic-css)
+* [Describtion](#desc)
+* [Overview](#over)
+* [Technologies](#tech)
 
-## How to use
+_________
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
 
-```bash
-npx create-next-app --example basic-css basic-css-app
-# or
-yarn create next-app --example basic-css basic-css-app
-```
+<a name="desc"></a>
 
-Deploy it to the cloud with [Vercel](https://vercel.com/import?filter=next.js&utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
-# Yalla_Business
+## Description
+
+Commentat crowdsources reviews of local businesses so that consumers are armed with the best possible information before making a decision about where they want to spend their money. They have essentially democratized restaurant (and other business) ratings and reviews so that we no longer need to rely on an oligopoly of opinions (i.e. food critics); we can instead make decisions based on the experiences of a much larger samples size – everybody with an internet connection.
+
+## Check out the site [here](https://yalla-business.vercel.app/)
+
+____________
+
+<a name="over"></a>
+
+## Overview
+
+For our server side we built it using Django 
+which is a Web framework written in Python, 
+we deployed it on Heroku and connected it 
+to our databse which is stored on ElephentSQL
+and for our client side we used NextJS 
+we deployed it using vercel.
+
+Finally, we used docker containers
+as a development tool to manage these two 
+applicati.
+
+
+
+_______________
+
+<a name="tech"></a>
+
+## Technologies
+
+* Django
+* NextJS
+* Docker
+* Rest API
+* JS6
+* Vercel
+* Heroku
+
