@@ -51,7 +51,7 @@ _______________
 * NextJS
 * Docker
 * Rest API
-* JS6
+* JSX
 * Vercel
 * Heroku
 
